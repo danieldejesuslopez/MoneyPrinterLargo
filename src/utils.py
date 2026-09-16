@@ -787,6 +787,21 @@ def _save_song_history(history: list) -> None:
         pass
 
 
+def _silent_track() -> str:
+    """A short silent WAV used as background music when Songs/ is empty."""
+    import wave
+
+    path = os.path.join(ROOT_DIR, ".mp", "silence.wav")
+    if not os.path.isfile(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with wave.open(path, "wb") as out:
+            out.setnchannels(2)
+            out.setsampwidth(2)
+            out.setframerate(44100)
+            out.writeframes(bytes(4 * 44100 * 5))
+    return path
+
+
 def choose_random_song(subject: str = "") -> str:
     """
     Picks a background music track from Songs/, biased by the video's subject.
@@ -807,6 +822,12 @@ def choose_random_song(subject: str = "") -> str:
     """
     try:
         songs_dir = os.path.join(ROOT_DIR, "Songs")
+        if not os.path.isdir(songs_dir) or not any(
+            n.lower().endswith((".mp3", ".wav", ".m4a", ".aac", ".ogg"))
+            for n in os.listdir(songs_dir)
+        ):
+            warning(" => No songs in Songs/ - rendering without background music.")
+            return _silent_track()
         songs = [
             name
             for name in os.listdir(songs_dir)

@@ -47,6 +47,11 @@ def main() -> int:
     parser.add_argument("--image-provider", default="stability")
     parser.add_argument("--image-mode", default="ai", choices=["ai", "photos"],
                         help="photos = real images (Wikimedia/NASA), no API key needed")
+    parser.add_argument("--topic", default="",
+                        help="skip topic generation/ranking and use this topic")
+    parser.add_argument("--images", default="",
+                        help="reuse existing PNGs: a folder (newest N) or a comma list")
+    parser.add_argument("--image-count", type=int, default=6)
     parser.add_argument("--upload", action="store_true")
     parser.add_argument("--rank-only", action="store_true",
                         help="stop after Brain picks the topic")
@@ -82,6 +87,9 @@ def main() -> int:
         voice_drama=acc.get("voice_drama", False),
     )
 
+    if args.topic:
+        return _render(youtube, args, args.topic.strip())
+
     info(f"\n  Generando {args.candidates} temas candidatos para {acc['nickname']}...")
     topics: list[str] = []
     for _ in range(args.candidates * 2):
@@ -109,14 +117,43 @@ def main() -> int:
 
     best = result["ranked"][0]["label"]
     success(f"\n  Tema elegido por Brain: {best}")
+    return _render(youtube, args, best)
+
+
+def _reuse_images(youtube, spec: str, count: int) -> None:
+    """Make the pipeline use existing PNGs instead of generating new ones."""
+    import glob
+
+    from status import info
+
+    if os.path.isdir(spec):
+        files = sorted(glob.glob(os.path.join(spec, "*.png")), key=os.path.getmtime)[-count:]
+    else:
+        files = [f.strip() for f in spec.split(",") if f.strip()]
+    missing = [f for f in files if not os.path.isfile(f)]
+    if not files or missing:
+        raise SystemExit(f"imagenes no encontradas: {missing or spec}")
+    info(f"  Reutilizando {len(files)} imagenes existentes:")
+    for f in files:
+        info(f"    {f}")
+
+    def use_existing(prompts, image_mode="ai"):
+        youtube.images = [os.path.abspath(f) for f in files]
+
+    youtube.generate_images_batch = use_existing
+
+
+def _render(youtube, args, topic: str) -> int:
+    from classes.Tts import TTS
+    from status import error, success
+
     if args.rank_only:
         return 0
-
-    from classes.Tts import TTS
-
-    video_path = youtube.generate_video(TTS(), custom_topic=best, image_mode=args.image_mode)
+    if args.images:
+        _reuse_images(youtube, args.images, args.image_count)
+    video_path = youtube.generate_video(TTS(), custom_topic=topic, image_mode=args.image_mode)
     if not video_path:
-        error("La generacion del video se abortó.")
+        error("La generacion del video se aborto.")
         return 1
     success(f"\n  Video listo: {video_path}")
     if args.upload:
