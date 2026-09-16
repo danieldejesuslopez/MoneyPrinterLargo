@@ -63,6 +63,8 @@
     "comfyui_scheduler": "karras",
     "comfyui_native_max_side": 1216,
     "comfyui_timeout_seconds": 600,
+    "stability_api_key": "",
+    "stability_model": "core",
     "pexels_api_key": "",
     "pixabay_api_key": "",
     "ideogram_api_key": "",
@@ -128,5 +130,33 @@
         "budget_limit": 50,
         "dry_run": false,
         "cost_rates": {}
+    },
+    "brain": {
+        "enabled": true,
+        "mode": "shadow",
+        "abstain_confidence": 0.45,
+        "diversity_threshold": 0.72,
+        "reward_weights": {
+            "normalized_views": 0.25,
+            "retention": 0.25,
+            "watch_minutes": 0.2,
+            "subscriber_rate": 0.1,
+            "ctr": 0.1,
+            "like_rate": 0.05,
+            "comment_rate": 0.05
+        },
+        "hybrid_weights": {
+            "neural": 0.65,
+            "heuristic": 0.2,
+            "rules": 0.1,
+            "novelty": 0.05
+        },
+        "thresholds": {
+            "topic_min_score": 6.5,
+            "script_min_score": 7.0,
+            "thumbnail_min_score": 6.5,
+            "overall_min_score": 7.0
+        },
+        "channels": {}
     }
 }

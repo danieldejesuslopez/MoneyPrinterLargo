@@ -688,9 +688,91 @@ def get_image_provider() -> str:
     value = os.environ.get("MP_IMAGE_PROVIDER", "").strip().lower()
     if not value:
         value = str(_get_config_value("image_provider", "auto") or "").strip().lower()
-    if value not in {"auto", "leonardo", "openai", "gemini"}:
+    if value not in {"auto", "leonardo", "openai", "gemini", "comfyui", "stability"}:
         return "auto"
     return value
+
+
+# --- ComfyUI (local GPU image generation) ----------------------------------
+# These drive src/comfyui_image_provider.py. Nothing here leaves the machine:
+# images render on the local graphics card via a running ComfyUI instance.
+
+def get_comfyui_base_url() -> str:
+    """Base URL of the local ComfyUI server."""
+    value = str(_get_config_value("comfyui_base_url", "") or "").strip()
+    return value or os.environ.get("COMFYUI_BASE_URL", "http://127.0.0.1:8188")
+
+
+def get_comfyui_checkpoint() -> str:
+    """Checkpoint filename as ComfyUI lists it, e.g. 'juggernautXL_v9.safetensors'."""
+    value = str(_get_config_value("comfyui_checkpoint", "") or "").strip()
+    return value or os.environ.get("COMFYUI_CHECKPOINT", "")
+
+
+def get_comfyui_workflow() -> str:
+    """Optional path to an API-format workflow JSON. Overrides the built-in graph.
+
+    Needed for model families whose loader chain differs from a plain
+    checkpoint (Flux, Qwen-Image, SD3.5). Export it from ComfyUI with
+    Workflow -> Export (API), then use the %PROMPT%, %NEGATIVE%, %WIDTH%,
+    %HEIGHT% and %SEED% placeholders inside it.
+    """
+    value = str(_get_config_value("comfyui_workflow", "") or "").strip()
+    value = value or os.environ.get("COMFYUI_WORKFLOW", "")
+    if value and not os.path.isabs(value):
+        value = os.path.join(ROOT_DIR, value)
+    return value
+
+
+def get_comfyui_steps() -> int:
+    """Sampling steps. 25-30 suits SDXL; Flux-schnell needs only 4."""
+    return _get_int_config("comfyui_steps", default=28, minimum=1, maximum=150)
+
+
+def get_comfyui_cfg() -> float:
+    """Classifier-free guidance. ~7 for SDXL, 1.0 for Flux/Turbo/Lightning."""
+    return _get_float_config("comfyui_cfg", default=7.0, minimum=0.0, maximum=30.0)
+
+
+def get_comfyui_sampler() -> str:
+    """KSampler sampler_name. Must match a sampler ComfyUI exposes."""
+    value = str(_get_config_value("comfyui_sampler", "") or "").strip()
+    return value or os.environ.get("COMFYUI_SAMPLER", "dpmpp_2m")
+
+
+def get_comfyui_scheduler() -> str:
+    """KSampler scheduler, e.g. karras, normal, sgm_uniform, beta."""
+    value = str(_get_config_value("comfyui_scheduler", "") or "").strip()
+    return value or os.environ.get("COMFYUI_SCHEDULER", "karras")
+
+
+def get_comfyui_native_max_side() -> int:
+    """Longest edge rendered natively before the LANCZOS upscale to canvas.
+
+    Diffusion models degrade badly outside their training resolution, so we do
+    not ask for the 3840px canvas directly. 1216 is the SDXL sweet spot for
+    9:16; Flux tolerates 1536. Raising this costs VRAM quadratically.
+    """
+    return _get_int_config("comfyui_native_max_side", default=1216, minimum=512, maximum=2560)
+
+
+def get_comfyui_negative_prompt() -> str:
+    """Shared negative prompt for the built-in workflow."""
+    value = _get_config_value("comfyui_negative_prompt", None)
+    if value is None:
+        value = os.environ.get("COMFYUI_NEGATIVE_PROMPT", None)
+    if value is None:
+        return (
+            "text, caption, subtitles, watermark, logo, signature, border, frame, "
+            "collage, split screen, grid, low resolution, blurry, jpeg artifacts, "
+            "deformed, extra fingers, extra limbs, mutated hands"
+        )
+    return str(value).strip()
+
+
+def get_comfyui_timeout_seconds() -> int:
+    """How long to wait for one render before giving up."""
+    return _get_int_config("comfyui_timeout_seconds", default=600, minimum=30, maximum=3600)
 
 
 def get_photo_vision_provider() -> str:
@@ -934,3 +1016,15 @@ def get_learning_model() -> str:
     if not value:
         value = str(_get_config_value("learning_model", "") or "").strip()
     return value
+
+
+def get_stability_api_key() -> str:
+    """Stability AI key: config.json `stability_api_key`, else STABILITY_API_KEY."""
+    configured = str(_get_config_value("stability_api_key", "") or "").strip()
+    return configured or os.environ.get("STABILITY_API_KEY", "").strip()
+
+
+def get_stability_model() -> str:
+    """Stability endpoint: core (default, cheapest), ultra or sd3."""
+    value = str(_get_config_value("stability_model", "core") or "").strip().lower()
+    return value if value in {"core", "ultra", "sd3"} else "core"

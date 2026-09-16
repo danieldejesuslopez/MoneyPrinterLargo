@@ -30,3 +30,6 @@ studio/dist/
 *.mp3
 *.wav
 *.png
+
+# Trained Brain models (per-installation, derived from private channel data)
+models/brain/

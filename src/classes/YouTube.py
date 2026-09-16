@@ -1832,6 +1832,10 @@ Example format:
     def _ai_image_providers(self, width: int = 1080, height: int = 1920) -> list[tuple[str, object, str]]:
         """Return AI image providers in the order selected for this job."""
         provider = self._ai_image_provider_choice()
+        if provider == "comfyui":
+            return [("ComfyUI (local GPU)", lambda p: self._try_comfyui_image(p, width, height), "ai")]
+        if provider == "stability":
+            return [("Stability AI", lambda p: self._try_stability_image(p, width, height), "ai")]
         if provider == "openai":
             return [("OpenAI Codex Image", lambda p: self._try_codex_cli_image(p, width, height), "ai")]
         if provider == "gemini":
@@ -1866,6 +1870,23 @@ Example format:
             height=height,
             model=active_model if isinstance(active_model, str) else "",
         )
+
+    def _try_comfyui_image(self, prompt: str, width: int = 1080, height: int = 1920) -> bytes:
+        """Render a visual on the local GPU through a running ComfyUI server."""
+        from comfyui_image_provider import generate_image_bytes_with_comfyui
+
+        print(colored(f"    [ComfyUI local GPU] Generating...", "cyan"), flush=True)
+        # The canvas hints in _targeted_image_prompt are written for multimodal
+        # LLM image APIs; a CLIP text encoder just wastes its 77 tokens on them,
+        # so the raw scene prompt goes through untouched.
+        return generate_image_bytes_with_comfyui(prompt, width=width, height=height)
+
+    def _try_stability_image(self, prompt: str, width: int = 1080, height: int = 1920) -> bytes:
+        """Render a visual through the hosted Stability AI (Stable Diffusion) API."""
+        from stability_image_provider import generate_image_bytes_with_stability
+
+        print(colored(f"    [Stability AI] Generating...", "cyan"), flush=True)
+        return generate_image_bytes_with_stability(prompt, width=width, height=height)
 
     def _try_gemini_image(self, prompt: str, width: int = 1080, height: int = 1920) -> bytes:
         """Generate a visual with Gemini Nano Banana."""

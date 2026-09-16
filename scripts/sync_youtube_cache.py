@@ -40,6 +40,16 @@ from typing import Optional
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_PATH = os.path.join(ROOT_DIR, ".mp", "youtube.json")
 
+# Video titles routinely contain emoji, and a Windows console is cp1252: one
+# unencodable character in a progress line used to raise UnicodeEncodeError
+# mid-run and lose the entire sync (nothing is written until the end). Degrade
+# the character instead of the whole import.
+try:
+    sys.stdout.reconfigure(errors="replace")
+    sys.stderr.reconfigure(errors="replace")
+except (AttributeError, OSError):
+    pass
+
 
 def normalize_title(t: str) -> str:
     """Lowercase, strip accents/punct, collapse whitespace.
@@ -126,8 +136,8 @@ def fetch_dislikes(video_id: str) -> int:
 def fetch_video_meta(video_id: str) -> dict:
     """Fetch upload_date + description + engagement counts for a single video.
     Cached per process. Returns {date, description, view_count, like_count,
-    comment_count, dislike_count}. Missing numeric fields default to -1 so the
-    UI can render "—" instead of confusing zeros."""
+    comment_count, dislike_count, duration}. Missing numeric fields default to
+    -1 so the UI can render "—" instead of confusing zeros."""
     if video_id in _VIDEO_META_CACHE:
         return _VIDEO_META_CACHE[video_id]
     import yt_dlp
@@ -139,6 +149,9 @@ def fetch_video_meta(video_id: str) -> dict:
         "like_count": -1,
         "comment_count": -1,
         "dislike_count": -1,
+        # Runtime in seconds. Brain needs it for watch-time labels and to
+        # learn duration-vs-retention; yt-dlp returns it for free here.
+        "duration": -1,
     }
     try:
         with yt_dlp.YoutubeDL(opts) as ydl:
@@ -165,6 +178,9 @@ def fetch_video_meta(video_id: str) -> dict:
                 v = info.get(src)
                 if isinstance(v, int):
                     out[dst] = v
+            duration = info.get("duration")
+            if isinstance(duration, (int, float)) and duration > 0:
+                out["duration"] = float(duration)
     except Exception as e:
         print(f"      (meta fetch failed for {video_id}: {str(e)[:80]})", flush=True)
     out["dislike_count"] = fetch_dislikes(video_id)
@@ -266,6 +282,13 @@ def sync_channel(acc: dict, handle: str, args, all_published: dict[str, dict],
     def needs_meta(v: dict) -> bool:
         if not v.get("description") or not (v.get("description") or "").strip():
             return True
+        try:
+            if float(v.get("duration_seconds")) > 0:
+                pass
+            else:
+                return True
+        except (TypeError, ValueError):
+            return True
         d = v.get("date") or ""
         # Force refresh of dates the script (or the original generation) made
         # up — they're current local time of the run, not the YT upload time.
@@ -337,6 +360,8 @@ def sync_channel(acc: dict, handle: str, args, all_published: dict[str, dict],
             for k in ("view_count", "like_count", "comment_count", "dislike_count"):
                 if meta.get(k, -1) >= 0:
                     v[k] = meta[k]
+            if meta.get("duration", -1) > 0:
+                v["duration_seconds"] = meta["duration"]
             v["stats_synced_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             if meta["date"] or meta["description"]:
                 meta_refreshed += 1
@@ -360,6 +385,7 @@ def sync_channel(acc: dict, handle: str, args, all_published: dict[str, dict],
                 "date": meta["date"] or datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "is_short": bool(info["is_short"]),
                 "thumbnail_path": "",
+                "duration_seconds": meta.get("duration", -1),
                 "view_count": meta.get("view_count", -1),
                 "like_count": meta.get("like_count", -1),
                 "comment_count": meta.get("comment_count", -1),

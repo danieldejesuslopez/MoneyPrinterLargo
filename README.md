@@ -36,6 +36,42 @@ La idea es simple: configurar tus proveedores, abrir la app, elegir el canal o f
 - Historial local de videos, archivos y métricas.
 - Auto-sync de suscriptores, views, likes y comentarios.
 
+### Brain
+
+Capa de aprendizaje sobre el pipeline. No genera nada: observa lo que se
+publica, aprende de los resultados reales y — cuando se lo ha ganado —
+reordena las decisiones que el pipeline iba a tomar igualmente.
+
+- Snapshots de métricas en el tiempo (la velocidad de views solo existe si se empieza a registrar).
+- Dataset con etiquetas relativas al canal, no views crudas.
+- 74 features interpretables con frontera dura pre-publicación (sin fugas de datos).
+- Reglas en frío desde el video cero, más cabezas de regresión cuando hay datos.
+- Registro de modelos con champion/challenger: nada se promueve por bajar el loss.
+- Ranking con diversidad y exploración, explicación del "por qué" y contrafactuales.
+- Backtest walk-forward: ¿habría elegido mejor?
+- Modo shadow por defecto: predice y registra, nunca decide.
+
+```bash
+python scripts/brain.py status      # qué sabe Brain ahora mismo
+python scripts/brain.py gaps        # qué falta registrar
+python scripts/brain.py snapshot    # métricas de hoy (diario)
+python scripts/brain.py dataset     # reconstruir el dataset
+python scripts/brain.py train       # entrenar retador y promover si lo merece
+python scripts/brain.py backtest    # ¿habría elegido mejor?
+python scripts/brain.py reference --add @otrocanal   # aprender de otros canales
+python scripts/brain.py research   # Brain le pregunta a Claude como mejorar y lo verifica
+
+# Visor en vivo de la red (http://localhost:8777)
+python scripts/brain_viz.py --demo  # red ya entrenada, para verla al instante
+python scripts/brain_viz.py         # tus canales reales
+```
+
+El visor muestra las 74 features, los pesos aprendidos hacia cada cabeza,
+las reglas en frío y cómo se arma el score. Escribe un tema y la red se
+enciende con los valores reales de ese candidato.
+
+Documentación completa en [docs/Brain.md](docs/Brain.md).
+
 ### Webapp
 
 - Backend con FastAPI.
@@ -227,6 +263,7 @@ MoneyPrinterLargo-public/
 │   ├── config.py              Lectura de config.json
 │   ├── cache.py               Persistencia local en .mp/
 │   ├── llm_provider.py        Dispatch OpenAI / Codex CLI / Gemini / Ollama / Pollinations
+│   ├── brain/                 Capa de aprendizaje (datos, features, modelos, ranking)
 │   └── classes/
 │       ├── YouTube.py         Pipeline de videos
 │       ├── Twitter.py         Automatización de X/Twitter
@@ -244,6 +281,8 @@ MoneyPrinterLargo-public/
 │           ├── components/    Componentes UI
 │           └── lib/api.ts     Cliente API
 ├── scripts/                   Setup, preflight, sync y helpers
+│   ├── brain.py               CLI de Brain (status, dataset, train, backtest)
+│   └── brain_viz.py           Visor en vivo de la red neuronal
 ├── docs/                      Documentación técnica
 ├── assets/                    Recursos estáticos
 ├── fonts/                     Fuentes usadas en renders
