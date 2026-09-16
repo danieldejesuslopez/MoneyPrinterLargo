@@ -140,6 +140,11 @@ def _reuse_images(youtube, spec: str, count: int) -> None:
     def use_existing(prompts, image_mode="ai"):
         youtube.images = [os.path.abspath(f) for f in files]
 
+    def skip_prompts(image_mode="ai"):
+        youtube.image_prompts = [""] * len(files)
+        return youtube.image_prompts
+
+    youtube.generate_prompts = skip_prompts
     youtube.generate_images_batch = use_existing
 
 
