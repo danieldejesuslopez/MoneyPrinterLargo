@@ -1,0 +1,15 @@
+{
+    "title": "El jardín de latón",
+    "module": "jardin.js",
+    "duration": 60,
+    "score": "waltz",
+    "voice": "es-MX-DaliaNeural",
+    "cues": [
+        [1.4, "En una isla que flotaba por encima de las nubes vivía Lito, el cuidador de las piedras."],
+        [10.3, "Cada mañana las contaba. Aquella vez, una de las piedras encendió una lucecita. Las piedras nunca hacían eso."],
+        [20.8, "Lito se acercó tanto que casi se le cayó la antena. Entre dos grietas temblaba una semilla dorada."],
+        [30.5, "Le dejó una gota del agua que guardaba para sus bisagras. Después esperó. Y esperó un poquito más."],
+        [41, "Primero salió un tallo. Después, una flor enorme. Y allí donde caía el polen, se abría otra flor."],
+        [51.7, "Al día siguiente, Lito intentó contar las flores. Perdió la cuenta. Y por primera vez, le dio igual."]
+    ]
+}

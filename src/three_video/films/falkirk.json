@@ -1,0 +1,78 @@
+{
+  "title": "The Wheel That Lifts Boats",
+  "episode": "falkirk",
+  "module": "kinetics.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "voice": "en-GB-RyanNeural",
+  "location": "FALKIRK  /  SCOTLAND",
+  "credit": "Scottish Canals & ICE",
+  "sources": [
+    "https://www.scottishcanals.co.uk/visit/canals/visit-the-forth-clyde-canal/attractions/the-falkirk-wheel",
+    "https://ice.org.uk/what-is-civil-engineering/infrastructure-projects/falkirk-wheel"
+  ],
+  "chapters": [
+    "A boat in midair",
+    "Two different heights",
+    "Eleven locks",
+    "Board at water level",
+    "What the boat replaces",
+    "Two equal loads",
+    "Seal the water in",
+    "Half a revolution",
+    "The floor stays level",
+    "An aqueduct in the sky",
+    "The rest of the climb",
+    "Follow the water"
+  ],
+  "cues": [
+    [
+      0.15,
+      "Watch the yellow boat. In a moment it will be hanging above a Scottish canal, with nothing under its hull except water. The entire pool is going up with it. What keeps the wheel in balance?"
+    ],
+    [
+      15.15,
+      "At Falkirk, two canals meet at different heights. The Forth and Clyde is down here. The route to the Union Canal goes over that aqueduct. The wheel handles twenty-four metres of the climb."
+    ],
+    [
+      30.15,
+      "There used to be a staircase of eleven locks linking the canals. Getting a boat through could take most of a day. When the waterways were reconnected, engineers put a rotating lift into service in two thousand and two."
+    ],
+    [
+      45.15,
+      "Back at the basin, the yellow boat enters a water-filled carrier called a gondola. While the entrance is open, the water inside and outside is at the same level. Now watch the surface as the bow goes in."
+    ],
+    [
+      60.15,
+      "The hull pushes some water out of the gondola. For a floating boat, the displaced water weighs exactly as much as the boat itself. The deeper the hull sits, the more water it displaces."
+    ],
+    [
+      75.15,
+      "Picture a gondola holding only water. Now replace some of that water with the yellow boat. Provided the level is the same, the total weight is the same. The other gondola can travel without a boat."
+    ],
+    [
+      90.15,
+      "Once the boat is inside, gates separate the gondola from the basin. The boat is still floating in its own pool. Watch the other end of the wheel. That second pool is about to move too."
+    ],
+    [
+      105.15,
+      "The yellow boat rises while the opposite gondola descends. Both loads act on the same axle, on opposite sides. Their effects nearly cancel, so the drive mostly has to overcome friction and get the wheel moving."
+    ],
+    [
+      120.15,
+      "Look at the yellow stripe along the gondola. The wheel turns, yet that stripe stays horizontal. Gearing turns the gondola relative to the arms, keeping the water underneath the boat throughout the lift."
+    ],
+    [
+      135.15,
+      "Half a turn later, the gondola lines up with the upper aqueduct. The gates can open and the boat can float out. The aqueduct is a channel carrying water across the gap to the hillside."
+    ],
+    [
+      150.15,
+      "The aqueduct takes the boat towards a tunnel and another pair of locks on the way to the Union Canal. That's why the height difference between the canals is greater than the lift made by the wheel itself."
+    ],
+    [
+      165.15,
+      "Seen from shore, the wheel seems to pick up a heavy boat almost effortlessly. Look inside its carrier and the trick is visible. The boat replaced its own weight in water before the lift even began."
+    ]
+  ]
+}

@@ -1012,7 +1012,7 @@ export function Generate() {
 // ─────────────────────────────────────────────────────────────────────────────
 // Track header
 // ─────────────────────────────────────────────────────────────────────────────
-function GenerateMetric({
+export function GenerateMetric({
   label,
   value,
   colorVar,
@@ -1034,7 +1034,7 @@ function GenerateMetric({
   );
 }
 
-function TrackHeader({
+export function TrackHeader({
   num,
   label,
   desc,
@@ -1126,7 +1126,7 @@ function formatUploadPlatformLabel(platforms: UploadPlatform[]) {
   return selected.slice(0, -1).join(", ") + " y " + selected[selected.length - 1];
 }
 
-function Field({
+export function Field({
   label,
   hint,
   children,
@@ -1150,7 +1150,7 @@ function Field({
   );
 }
 
-function TextInput({
+export function TextInput({
   value,
   onChange,
   placeholder,
@@ -1182,7 +1182,7 @@ function TextInput({
   );
 }
 
-function TextArea({
+export function TextArea({
   value,
   onChange,
   placeholder,
@@ -1211,7 +1211,7 @@ function TextArea({
   );
 }
 
-function Segmented({
+export function Segmented({
   options,
   value,
   onChange,
@@ -1261,7 +1261,7 @@ function Segmented({
   );
 }
 
-function ToggleRow({
+export function ToggleRow({
   label,
   hint,
   value,
@@ -1289,7 +1289,7 @@ function ToggleRow({
   );
 }
 
-function Divider() {
+export function Divider() {
   return (
     <div
       className="h-px"
@@ -1613,7 +1613,7 @@ function ChannelSummary({ channel }: { channel: Channel | undefined }) {
   );
 }
 
-function Mini({
+export function Mini({
   label,
   value,
   accentVar,
@@ -1646,7 +1646,7 @@ function Mini({
   );
 }
 
-function Row({ k, v }: { k: string; v: string }) {
+export function Row({ k, v }: { k: string; v: string }) {
   return (
     <div className="flex justify-between gap-3">
       <span

@@ -1,0 +1,68 @@
+{
+  "title": "How a Ship Climbs Panama",
+  "episode": "gatun",
+  "voice": "en-GB-RyanNeural",
+  "module": "waterworks.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "sources": [
+    [
+      "Panama Canal Authority",
+      "https://pancanal.com/en/history-of-the-panama-canal/"
+    ],
+    [
+      "Design of the Locks",
+      "https://pancanal.com/en/design-of-the-locks/"
+    ]
+  ],
+  "cues": [
+    [
+      0.15,
+      "A ship crossing Panama from the Atlantic has to climb about twenty-six metres before it can sail towards the Pacific. Here's the strange part. For the climb itself, nobody has to pump the ship's water uphill."
+    ],
+    [
+      15.15,
+      "Look at the route from the side. The canal crosses Gatun Lake, well above sea level. Follow a ship through the original locks. Three steps at Gatun bring it up to the lake."
+    ],
+    [
+      30.15,
+      "Zoom in on the first step. The ship enters a concrete chamber with the water at its entry level. Two steel gate leaves swing closed behind it. Seen from above, they meet in a shallow V."
+    ],
+    [
+      45.15,
+      "Behind the next gate is a higher level of water. Opening that gate all at once would send a rush straight at the ship. The engineers gave the water another way into the chamber."
+    ],
+    [
+      60.15,
+      "Inside the side walls and the centre wall run large tunnels. Smaller passages branch beneath the floor. Open a filling valve and water from the higher level runs down through this hidden network."
+    ],
+    [
+      75.15,
+      "Now look beneath the hull. A hundred openings spread the incoming water across the chamber floor. Filling from many places helps control turbulence while the water level rises around the vessel."
+    ],
+    [
+      90.15,
+      "The ship floats on that rising surface. Watch its deck against the fixed top of the wall. The gap shrinks. Gravity brings the water down from above, and the buoyant ship goes up with it."
+    ],
+    [
+      105.15,
+      "When the two surfaces reach the same level, the forward gates can swing open. The ship moves into the next chamber without climbing a ramp. The rise happens while it is floating almost in place."
+    ],
+    [
+      120.15,
+      "Repeat that sequence through all three steps at Gatun. The ship reaches the height of the lake and can sail across it. Farther along, it passes through the cut across the continental divide."
+    ],
+    [
+      135.15,
+      "On the Pacific side, the staircase runs the other way. In the original route, one step at Pedro Miguel lowers the ship. Two more at Miraflores take it down to the Pacific."
+    ],
+    [
+      150.15,
+      "To lower the ship, operators close the filling valves and open the outlets towards the lower level. Water leaves through the same floor openings. The hull follows the falling surface until the next gate can open."
+    ],
+    [
+      165.15,
+      "Look back at the whole crossing. The ship ends up at sea level again, after crossing a lake high above both entrances. The locks made the journey possible by changing the height of the water underneath the ship."
+    ]
+  ]
+}

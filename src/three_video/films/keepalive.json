@@ -1,0 +1,41 @@
+{
+  "title": "The Last Moving Employee",
+  "module": "keepalive.js",
+  "aspect": "9:16",
+  "duration": 60,
+  "voice": "en-GB-RyanNeural",
+  "cues": [
+    [
+      0.12,
+      "On Monday, Max found his computer gone. His boss pointed at the wall. See that little light? Wave at it."
+    ],
+    [
+      7.8,
+      "Max waved. Somewhere behind him, a printer came to life. His boss checked his watch. Perfect. Keep doing that till six."
+    ],
+    [
+      16.7,
+      "Turns out, the new smart office had exactly one motion sensor. And somebody had installed it facing Max's desk."
+    ],
+    [
+      24.9,
+      "As long as Max moved, the building knew people were working. At noon, he unwrapped a sandwich. Both hands busy."
+    ],
+    [
+      33,
+      "The lights went out. Upstairs, twelve people sat in the dark. Downstairs, Max took a bite."
+    ],
+    [
+      40.4,
+      "His boss came running. Max held out the sandwich. Hold this. He gave the wall one little wave."
+    ],
+    [
+      48.1,
+      "The lights came back. The printer finished its page. It was Max's new job title."
+    ],
+    [
+      54.2,
+      "Head of Motion. For the first time in his career, Max asked for a raise without lifting a finger."
+    ]
+  ]
+}

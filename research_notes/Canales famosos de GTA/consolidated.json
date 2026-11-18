@@ -1,0 +1,1539 @@
+{
+  "researched_on": "2026-11-17",
+  "unique_creators": 81,
+  "languages": {
+    "es": 39,
+    "en": 42
+  },
+  "created_count": 81,
+  "already_present": [],
+  "duplicates_removed": [],
+  "backup_path": ".mp/gta6/backups/before-watchlist-20261117T184836270416Z.sqlite3",
+  "excluded": [
+    {
+      "name": "Garcilazo",
+      "reason": "El usuario pide creadores famosos o grandes; alcance de nicho."
+    }
+  ],
+  "records": [
+    {
+      "name": "Rubius",
+      "language": "es",
+      "url": "https://www.twitch.tv/rubius",
+      "credit": "@rubius",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=6YqY6h432fc",
+      "evidence_note": "Serie de GTA V roleplay publicada por Rubius Z en 2020. Alias: ElRubiusOMG, Rubius Z; se cuenta una sola persona. También se encontró contenido GTA V de 2026 mediante índice secundario, sin usarlo para afirmar frecuencia actual.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "Mi Nombre es JJ | GTA V Roleplay #1",
+      "evidence_author": "Rubius Z",
+      "evidence_author_url": "https://www.youtube.com/@elrubius",
+      "workspace_source_id": "9b8e04aa51d24a4b"
+    },
+    {
+      "name": "IlloJuan",
+      "language": "es",
+      "url": "https://www.twitch.tv/illojuan",
+      "credit": "@illojuan",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=vA5_OqBt0vU",
+      "evidence_note": "Video propio de febrero de 2026 jugando GTA V con modificaciones gráficas. Alias histórico LMDShow; no se duplica.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "evidence_title": "LA VERSIÓN DEFINITIVA DE GTA 5 HA LLEGADO 📸",
+      "evidence_author": "IlloJuan",
+      "evidence_author_url": "https://www.youtube.com/@IlloJuan_",
+      "workspace_source_id": "4b3bf17f7f954f74"
+    },
+    {
+      "name": "VEGETTA777",
+      "language": "es",
+      "url": "https://www.youtube.com/@VEGETTA777",
+      "credit": "@VEGETTA777",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=8x2YfU1AFt8",
+      "evidence_note": "Gameplay propio de GTA V Online en PC. Evidencia histórica; no demuestra una frecuencia actual de GTA.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "GTA V ONLINE PC: DESCUBRIENDO MUNDO",
+      "evidence_author": "VEGETTA777",
+      "evidence_author_url": "https://www.youtube.com/@vegetta777",
+      "workspace_source_id": "ce8fc3f72a7b4379"
+    },
+    {
+      "name": "Willyrex",
+      "language": "es",
+      "url": "https://www.youtube.com/@TheWillyrex",
+      "credit": "@TheWillyrex",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=Oynon25YVbA",
+      "evidence_note": "Video de entretenimiento sobre GTA VI publicado en agosto de 2026 con IlloJuan. Su descripción aclara que no es patrocinado por Rockstar. También tiene GTA V con Luzu y Vegetta. Alias Willyrex y TheWillyrex; una persona.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "evidence_title": "Abriendo Cajas de GTA VI",
+      "evidence_author": "TheWillyrex",
+      "evidence_author_url": "https://www.youtube.com/@thewillyrex",
+      "workspace_source_id": "1ce9932de5d84012"
+    },
+    {
+      "name": "Auron",
+      "language": "es",
+      "url": "https://www.youtube.com/@auron",
+      "credit": "@auron",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=eXEVYpZrQ9I",
+      "evidence_note": "Video propio de carreras de GTA V publicado en septiembre de 2026 con DjMaRiiO, Peereira7 y Agustin51. Alias AuronPlay; una persona.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "evidence_title": "🏎️ CARRERITAS DE GTA V CON DJMARIIO, PEEREIRA7, AGUSTIN51 Y LA PEÑA DEL MOCO",
+      "evidence_author": "Auron",
+      "evidence_author_url": "https://www.youtube.com/@auron",
+      "workspace_source_id": "599faf989b794f9f"
+    },
+    {
+      "name": "Ibai",
+      "language": "es",
+      "url": "https://www.youtube.com/@IbaiLlanos",
+      "credit": "@IbaiLlanos",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=hCKqrv7y1Xo",
+      "evidence_note": "Episodio propio de GTA V roleplay publicado en mayo de 2020. Evidencia histórica, sin afirmar cobertura diaria actual.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "TODOS ODIAN AL NUEVO | GTA V ROLEPLAY #1",
+      "evidence_author": "Ibai",
+      "evidence_author_url": "https://www.youtube.com/@IbaiLlanos",
+      "workspace_source_id": "3823d040fc0143a2"
+    },
+    {
+      "name": "Spreen",
+      "language": "es",
+      "url": "https://www.youtube.com/@spreen",
+      "credit": "@spreen",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://kick.com/spreen/videos/01a1b82d-1260-7ac9-acf5-319e92033e35",
+      "evidence_note": "VOD propio de carreras GTA localizado en Kick en noviembre de 2026. Existe además video propio de GTA V de 2021: https://www.youtube.com/watch?v=lCblSXYW2VM . Alias SpreenDMC; una persona.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "6ddd2f41cc254f61"
+    },
+    {
+      "name": "Quackity",
+      "language": "es",
+      "url": "https://www.twitch.tv/quackity",
+      "credit": "@quackity",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=ZfmtrNB1P1g",
+      "evidence_note": "VOD del canal oficial QuackityVODS publicado en septiembre de 2026 jugando GTA roleplay. Creador bilingüe; esta evidencia concreta está en inglés, no demuestra GTA en español. Una persona, sin duplicar VODS ni Quackitwo.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "evidence_title": "Quackity's First Ever GTA Roleplay",
+      "evidence_author": "QuackityVODS",
+      "evidence_author_url": "https://www.youtube.com/@QuackityVODS",
+      "workspace_source_id": "ace9ac450d504d06"
+    },
+    {
+      "name": "Perxitaa",
+      "language": "es",
+      "url": "https://www.youtube.com/@perxitaa",
+      "credit": "@perxitaa",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=UZpZRVFZBsA",
+      "evidence_note": "Serie propia de GTA V roleplay con Auron en 2020. Perfil mixto, con fuerte componente de roleplay; puede clasificarse también como especialista RP. Actividad actual no confirmada directamente en plataforma en esta muestra.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "AURONPLAY Y PERXITAA en GTA V ROLEPLAY #1",
+      "evidence_author": "perxitaa",
+      "evidence_author_url": "https://www.youtube.com/@perxitaa",
+      "workspace_source_id": "d77fa6b3beea4f45"
+    },
+    {
+      "name": "Cristinini",
+      "language": "es",
+      "url": "https://www.youtube.com/@CristininiRP",
+      "credit": "@CristininiRP",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/channel/UCweA1YR2geRziviuFYIY10Q",
+      "evidence_note": "El canal secundario oficial describe explícitamente que conserva sus historias de GTA V roleplay. El canal principal también publicó roleplay en 2019: https://www.youtube.com/watch?v=sbuzODN_FFI . Una persona, sin duplicar sus canales.",
+      "popularity": "grande",
+      "current_activity": "sin confirmar",
+      "workspace_source_id": "57201c3a49df429c"
+    },
+    {
+      "name": "Fargan",
+      "language": "es",
+      "url": "https://www.youtube.com/@xFaRgAnx",
+      "credit": "@xFaRgAnx",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=R4zBtLBCigM",
+      "evidence_note": "Video propio de parkour en GTA V publicado en diciembre de 2019. La agencia Vizz también identifica GTA V entre su contenido. Alias xFaRgAnx YT; una persona.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "DONDE ESTA FARGAN?? JAJAJA GTA V PARKOUR",
+      "evidence_author": "xFaRgAnx YT",
+      "evidence_author_url": "https://www.youtube.com/@xFaRgAnx",
+      "workspace_source_id": "669b050981f644e5"
+    },
+    {
+      "name": "Folagor",
+      "language": "es",
+      "url": "https://www.youtube.com/@Folagor03",
+      "credit": "@Folagor03",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=Y3-wgY5qnFM",
+      "evidence_note": "Episodio propio de GTA V roleplay publicado en mayo de 2020. Predomina variedad y Pokémon; incluir como generalista con GTA histórico, no como informador especializado GTA VI.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "GTA V ROLEPLAY - ME ROBAN EN PLENO VÍDEO (FOLAGOR GTA #5)",
+      "evidence_author": "Folagor03",
+      "evidence_author_url": "https://www.youtube.com/@Folagor03",
+      "workspace_source_id": "2550ba00e26f4f65"
+    },
+    {
+      "name": "DjMaRiiO",
+      "language": "es",
+      "url": "https://www.twitch.tv/djmariio",
+      "credit": "@djmariio",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=eXEVYpZrQ9I",
+      "evidence_note": "Participación identificada en el título del video de carreras GTA V publicado por Auron en septiembre de 2026. Evidencia de colaboración, no de especialización GTA del canal propio.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "evidence_title": "🏎️ CARRERITAS DE GTA V CON DJMARIIO, PEEREIRA7, AGUSTIN51 Y LA PEÑA DEL MOCO",
+      "evidence_author": "Auron",
+      "evidence_author_url": "https://www.youtube.com/@auron",
+      "workspace_source_id": "af4a64ba1deb474a"
+    },
+    {
+      "name": "Agustin51",
+      "language": "es",
+      "url": "https://www.twitch.tv/agustin51",
+      "credit": "@agustin51",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=eXEVYpZrQ9I",
+      "evidence_note": "Participación identificada en el título del video de carreras GTA V de Auron de septiembre de 2026. También nombrado en la descripción de Peereira7: https://www.youtube.com/watch?v=lkWJGqCOmBI .",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "evidence_title": "🏎️ CARRERITAS DE GTA V CON DJMARIIO, PEEREIRA7, AGUSTIN51 Y LA PEÑA DEL MOCO",
+      "evidence_author": "Auron",
+      "evidence_author_url": "https://www.youtube.com/@auron",
+      "workspace_source_id": "b1ec1cafc9fb4587"
+    },
+    {
+      "name": "Peereira7",
+      "language": "es",
+      "url": "https://www.twitch.tv/peereira7",
+      "credit": "@peereira7",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=lkWJGqCOmBI",
+      "evidence_note": "Video propio de carreras GTA V con Auron, Agustin51, Carola y Komanche, publicado en junio de 2026; la descripción enlaza su Twitch. Tiene web propia dedicada a su subathon de GTA: https://www.peereira7.com/ .",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "evidence_title": "GANÉ MI PRIMERA CARRERA CON AURON Y AGUSTIN!",
+      "evidence_author": "Peereira7",
+      "evidence_author_url": "https://www.youtube.com/@Peereira7",
+      "workspace_source_id": "6d053cdba31e47fd"
+    },
+    {
+      "name": "Carola",
+      "language": "es",
+      "url": "https://www.twitch.tv/carola",
+      "credit": "@carola",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=lkWJGqCOmBI",
+      "evidence_note": "Nombrado como participante de carreras GTA V en la descripción del video propio de Peereira7 de junio de 2026. La evidencia directa aquí es de carreras; el componente RP requiere revisar sus VOD antes de seleccionar material.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "evidence_title": "GANÉ MI PRIMERA CARRERA CON AURON Y AGUSTIN!",
+      "evidence_author": "Peereira7",
+      "evidence_author_url": "https://www.youtube.com/@Peereira7",
+      "workspace_source_id": "a45c853d702c4c2b"
+    },
+    {
+      "name": "Komanche",
+      "language": "es",
+      "url": "https://www.twitch.tv/komanche",
+      "credit": "@komanche",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=lkWJGqCOmBI",
+      "evidence_note": "Nombrado como participante de carreras GTA V en la descripción del video propio de Peereira7 de junio de 2026. Evidencia de colaboración, sin atribuir periodicidad GTA al canal propio.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "evidence_title": "GANÉ MI PRIMERA CARRERA CON AURON Y AGUSTIN!",
+      "evidence_author": "Peereira7",
+      "evidence_author_url": "https://www.youtube.com/@Peereira7",
+      "workspace_source_id": "b5991aa676394cdb"
+    },
+    {
+      "name": "Fernanfloo",
+      "language": "es",
+      "url": "https://www.youtube.com/@Fernanfloo",
+      "credit": "@Fernanfloo",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=3p-VS0bbUCE",
+      "evidence_note": "Gameplay propio GTA V en primera persona publicado en mayo de 2015. Referente histórico de gran alcance; esta evidencia no acredita actividad GTA reciente.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "GTA V - MOMENTOS DIVERTIDOS EN PRIMERA PERSONA (GTA 5)",
+      "evidence_author": "Fernanfloo",
+      "evidence_author_url": "https://www.youtube.com/@Fernanfloo",
+      "workspace_source_id": "28c82aed8a4f42d8"
+    },
+    {
+      "name": "JuanSGuarnizo",
+      "language": "es",
+      "url": "https://www.twitch.tv/juansguarnizo",
+      "credit": "@juansguarnizo",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=w-mQmA3yx8I",
+      "evidence_note": "Video propio de GTA V publicado en agosto de 2019 con BarcaGamer y RobertoCein; su descripción enlaza Twitch. Evidencia histórica; no usar como prueba de frecuencia actual.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "LA CASA DE PAPEL 💰",
+      "evidence_author": "JuanSGuarnizo",
+      "evidence_author_url": "https://www.youtube.com/@JuanSGuarnizo",
+      "workspace_source_id": "4f91445bf71644c7"
+    },
+    {
+      "name": "ElMariana",
+      "language": "es",
+      "url": "https://www.twitch.tv/elmariana",
+      "credit": "@elmariana",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=l6gKbOs_Sek",
+      "evidence_note": "Video del canal propio ElMariana Gaming publicado en diciembre de 2023 cuya descripción confirma reacción a GTA VI y enlaza su Twitch. Es cobertura ocasional histórica, no canal especializado GTA.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "REACCIONO A GTA VI DESPUÉS DE COMETER UN CRIMEN 💀",
+      "evidence_author": "ElMariana Gaming",
+      "evidence_author_url": "https://www.youtube.com/@ElMarianaJuega",
+      "workspace_source_id": "06a73439f3f04d74"
+    },
+    {
+      "name": "Luzu",
+      "language": "es",
+      "url": "https://www.youtube.com/@luzugames",
+      "credit": "@luzugames",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=P4My7xKLPNU",
+      "evidence_note": "Video propio de GTA V con Willyrex, Vegetta y Alexby, localizado a través del catálogo TotalGTA. Alias LuzuGames; una persona. No se ha confirmado frecuencia reciente.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "MALDITO TUNEL!! GTA V con Willyrex, Vegetta y AlexBY - [LuzuGames]",
+      "evidence_author": "luzugames",
+      "evidence_author_url": "https://www.youtube.com/@luzugames",
+      "workspace_source_id": "ce0ab6cb1b2b44f8"
+    },
+    {
+      "name": "Mangel",
+      "language": "es",
+      "url": "https://www.youtube.com/@mangelrogel",
+      "credit": "@mangelrogel",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=Oh2UwOxiZ3M",
+      "evidence_note": "Gameplay propio de GTA V con Cheeto. Video y autor confirmados mediante el endpoint publico oEmbed de YouTube; fuente historica sin frecuencia actual comprobada.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "GTA V GAMEPLAY: AY DIOS MIO!! (Con Cheeto)",
+      "evidence_author": "mangelrogel",
+      "evidence_author_url": "https://www.youtube.com/@mangelrogel",
+      "workspace_source_id": "1be15c86e6d1439e"
+    },
+    {
+      "name": "TheGrefg",
+      "language": "es",
+      "url": "https://www.youtube.com/@TheGrefg",
+      "credit": "@TheGrefg",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=AiBDG0PRk7s",
+      "evidence_note": "Episodio propio inicial de GTA V roleplay en Marbella Vice. Video y autor confirmados mediante oEmbed. Fuente historica; no prueba frecuencia actual.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "evidence_title": "MI PERSONAJE EN MARBELLA VICE | GTA V ROLEPLAY #1 - TheGrefg",
+      "evidence_author": "TheGrefg",
+      "evidence_author_url": "https://www.youtube.com/@TheGrefg",
+      "workspace_source_id": "6a6f902b73fd46b1"
+    },
+    {
+      "name": "BarcaGamer",
+      "language": "es",
+      "url": "https://www.twitch.tv/barcagamer",
+      "credit": "@barcagamer",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=w-mQmA3yx8I",
+      "evidence_note": "JuanSGuarnizo identifica su participación en una sesión GTA V en la descripción del video de agosto de 2019 y enlaza el canal de Barca. Evidencia histórica de colaboración.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "LA CASA DE PAPEL 💰",
+      "evidence_author": "JuanSGuarnizo",
+      "evidence_author_url": "https://www.youtube.com/@JuanSGuarnizo",
+      "workspace_source_id": "97e8a259c8f34edf"
+    },
+    {
+      "name": "RobertoCein",
+      "language": "es",
+      "url": "https://www.twitch.tv/robertocein",
+      "credit": "@robertocein",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=w-mQmA3yx8I",
+      "evidence_note": "JuanSGuarnizo identifica su participación en una sesión GTA V en la descripción del video de agosto de 2019 y enlaza su canal. Evidencia histórica de colaboración.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "LA CASA DE PAPEL 💰",
+      "evidence_author": "JuanSGuarnizo",
+      "evidence_author_url": "https://www.youtube.com/@JuanSGuarnizo",
+      "workspace_source_id": "0d8e6c9427054369"
+    },
+    {
+      "name": "Alexby11",
+      "language": "es",
+      "url": "https://www.youtube.com/@xAlexBY11",
+      "credit": "@xAlexBY11",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=P4My7xKLPNU",
+      "evidence_note": "Participación identificada en el título del video propio de Luzu con Willyrex y Vegetta. Alias aLexBY11; una persona. Los índices recientes sugieren más GTA pero aquí solo se acredita la colaboración histórica.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "evidence_title": "MALDITO TUNEL!! GTA V con Willyrex, Vegetta y AlexBY - [LuzuGames]",
+      "evidence_author": "luzugames",
+      "evidence_author_url": "https://www.youtube.com/@luzugames",
+      "workspace_source_id": "f055ced0a7ea46d6"
+    },
+    {
+      "name": "DaniRep",
+      "language": "es",
+      "url": "https://www.youtube.com/@TheDaniRep",
+      "credit": "@TheDaniRep",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=NPgcj09S0xM",
+      "evidence_note": "Carreras y retos de GTA Online. Video y autor verificados mediante oEmbed oficial de YouTube. DaniRep Happy y EXTRA son canales de la misma persona y no se cuentan aparte.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "9508bb50bdee4cd5"
+    },
+    {
+      "name": "Stratus",
+      "language": "es",
+      "url": "https://www.youtube.com/@StratusBPM",
+      "credit": "@StratusBPM",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=bqHWDEJQY4E",
+      "evidence_note": "Directo titulado GTA VI GAMEPLAY x NETFLIX; cobertura GTA y carreras/tuneos GTA Online. Título, autor y canal comprobados con oEmbed oficial. El título prueba cobertura, no confirma las afirmaciones del creador.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "workspace_source_id": "77537d25874047c0"
+    },
+    {
+      "name": "Makiman / MakiGames",
+      "language": "es",
+      "url": "https://www.youtube.com/@Makiman131",
+      "credit": "@Makiman131",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=q6RCkA7ARkU",
+      "evidence_note": "Video Comprando el GTA 6, autor y handle verificados por oEmbed. Histórico de mods y GTA Online; actualmente también hace entretenimiento general. MakiGames @makigames131 es el canal de gaming de la misma persona; no contarlo aparte.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "c7e66b430b5c49ca"
+    },
+    {
+      "name": "ElChurches",
+      "language": "es",
+      "url": "https://www.youtube.com/@ElChurches",
+      "credit": "@ElChurches",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=pZr82x0jWe0",
+      "evidence_note": "JUGANDO como GUARDAESPALDAS DEL PRESIDENTE en GTA 5. Gameplay, mods y situaciones humorísticas. Video, autor y handle verificados con oEmbed oficial.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "ce796391580844a6"
+    },
+    {
+      "name": "Vista Gamer",
+      "language": "es",
+      "url": "https://www.youtube.com/@vistagamerr",
+      "credit": "@vistagamerr",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=AJ5hqpy1w6g",
+      "evidence_note": "Me CONVIERTO en el SPIDERMAN mas RÁPIDO de GTA 5. Retos y mods de GTA V. Título, autor y handle verificados mediante oEmbed oficial.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "acf49726a63345eb"
+    },
+    {
+      "name": "TheKalo",
+      "language": "es",
+      "url": "https://www.youtube.com/@TheKaloYT",
+      "credit": "@TheKaloYT",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=mPC65kRY6jQ",
+      "evidence_note": "SOBREVIVÍ Como GOKU en EL JUEGO DEL CALAMAR en GTA 5 (Dragon Ball mod). Canal de mods y entretenimiento, no noticias oficiales. Video/autor/handle verificados por oEmbed; el ejemplo es histórico.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "workspace_source_id": "93d0859da3e347ba"
+    },
+    {
+      "name": "León Picarón",
+      "language": "es",
+      "url": "https://www.youtube.com/@LeonPicaron",
+      "credit": "@LeonPicaron",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=Dy77X_8NRPQ",
+      "evidence_note": "DE SONIC POBRE a SONIC RICO en GTA 5 (Sonic Movie mod). Mods y narrativa de entretenimiento. Video/autor/handle comprobados mediante oEmbed oficial. No confundir mods con gameplay real de GTA VI.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "a68feafe7c6b4323"
+    },
+    {
+      "name": "Skynex",
+      "language": "es",
+      "url": "https://www.youtube.com/@Skynexito",
+      "credit": "@Skynexito",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=PK93emL0bN8",
+      "evidence_note": "Mi Análisis PLANO A PLANO del ÚLTIMO TRÁILER de GTA 6. Análisis de Rockstar y tráileres. Título, autor y handle comprobados mediante oEmbed oficial.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "workspace_source_id": "6be0a4571df4425e"
+    },
+    {
+      "name": "KerstHD / Kersty",
+      "language": "es",
+      "url": "https://www.youtube.com/@KerstHD",
+      "credit": "@KerstHD",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=rMOAQVjzo1g",
+      "evidence_note": "Análisis del Nuevo Gameplay de GTA 6 en South Park y las 12 Nuevas Imágenes. Autor y handle comprobados por oEmbed oficial. Kersty es alias/canal secundario de la misma persona; contar una vez. El título no valida las afirmaciones del video.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "workspace_source_id": "28935928578e4a62"
+    },
+    {
+      "name": "Trashudo Games",
+      "language": "es",
+      "url": "https://www.youtube.com/@trashudogames",
+      "credit": "@trashudogames",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=xcLk-oYsVK4",
+      "evidence_note": "GTA 6 vs VIDA REAL, con hashtags GTA/GTA5/GTA6. Shorts, curiosidades y cobertura GTA. Título, autor y canal verificados mediante oEmbed oficial.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "workspace_source_id": "5f75d026421d4f2c"
+    },
+    {
+      "name": "Fisper",
+      "language": "es",
+      "url": "https://www.youtube.com/@Fisper",
+      "credit": "@Fisper",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=7Z6afKewIcc",
+      "evidence_note": "Probé 6 MITOS de la POLICÍA en GTA 5. Retos, mitos y mods de GTA. Título, autor y handle comprobados mediante oEmbed oficial.",
+      "popularity": "masivo",
+      "current_activity": "comprobada",
+      "workspace_source_id": "f060866983f848f7"
+    },
+    {
+      "name": "This is Isma GTA VI",
+      "language": "es",
+      "url": "https://www.youtube.com/@ThisisIsma",
+      "credit": "@ThisisIsma",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA 6"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=cDUUHNwjpZY",
+      "evidence_note": "GTA 6 Hará Cosas Que GTA 5 NUNCA Pudo Hacer. Comparativas, noticias y expectativas de GTA VI. Título/autor/handle comprobados por oEmbed oficial; sus predicciones requieren contraste oficial.",
+      "popularity": "grande",
+      "current_activity": "comprobada",
+      "workspace_source_id": "035d66d9ecd044dc"
+    },
+    {
+      "name": "Zoko",
+      "language": "es",
+      "url": "https://www.youtube.com/@Zoko",
+      "credit": "@Zoko",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=IpFD7hAlgf8",
+      "evidence_note": "WALLRIDE DE OVNIS EN LA PLAYA GTA V Online PS4, carreras. Video histórico de 2016, autor y handle comprobados con oEmbed oficial. No se ha confirmado actividad reciente GTA.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "workspace_source_id": "443cda83157845f6"
+    },
+    {
+      "name": "Broughy1322",
+      "language": "en",
+      "url": "https://www.youtube.com/@broughy1322",
+      "credit": "@broughy1322",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=Af8i3Ry1ZV4",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Broughy1322. Video: Fastest Supercars (2020) - GTA 5 Best Fully Upgraded Cars Top Speed Countdown",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/broughy1322/",
+      "evidence_title": "Fastest Supercars (2020) - GTA 5 Best Fully Upgraded Cars Top Speed Countdown",
+      "workspace_source_id": "5a730f9b8e1440ca"
+    },
+    {
+      "name": "Buddha",
+      "language": "en",
+      "url": "https://www.twitch.tv/buddha",
+      "credit": "@buddha",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://kick.com/buddha/about",
+      "evidence_note": "Perfil oficial de Kick: bio indica GTA V RP en NoPixel; canal principal de Twitch corroborado por directorio. Video de YouTube conservado como evidencia secundaria, sin presumir titularidad del canal de clips.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/buddha/",
+      "evidence_title": "Buddha Reports on The Most Chaotic Week in Los Santos ft. KYRSP33DY - NoPixel NEWS EP. 7",
+      "secondary_evidence_url": "https://www.youtube.com/watch?v=KgpEXSL_vlg",
+      "identity_url": "https://kick.com/buddha/about",
+      "workspace_source_id": "e5a65bf7b74745b0"
+    },
+    {
+      "name": "DarkViperAU",
+      "language": "en",
+      "url": "https://www.youtube.com/@DarkViperAU",
+      "credit": "@DarkViperAU",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=8x1hEvRMzR0",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: DarkViperAU. Video: I Finished GTA V Without Taking ANY Damage - No Hit Run Success (One Hit KO)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/darkviperau/",
+      "evidence_title": "I Finished GTA V Without Taking ANY Damage - No Hit Run Success (One Hit KO)",
+      "workspace_source_id": "85729082f89e4342"
+    },
+    {
+      "name": "Digital Car Addict",
+      "language": "en",
+      "url": "https://www.youtube.com/@DigitalCarAddict",
+      "credit": "@DigitalCarAddict",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=p0zPcFcBV3k",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Digital Car Addict. Video: GTA 5 - DLC Vehicle Customization - Oppressor Mk II",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/digital-car-addict/",
+      "evidence_title": "GTA 5 - DLC Vehicle Customization - Oppressor Mk II",
+      "workspace_source_id": "a20a41498e6c4f66"
+    },
+    {
+      "name": "Elanip",
+      "language": "en",
+      "url": "https://www.youtube.com/@Elanip",
+      "credit": "@Elanip",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=7M_G_CxIU3w",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Elanip. Video: I Used a Custom Blow Dart Gun on Cops in GTA 5 RP",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/elanip/",
+      "evidence_title": "I Used a Custom Blow Dart Gun on Cops in GTA 5 RP",
+      "workspace_source_id": "8c9206d789274557"
+    },
+    {
+      "name": "GhillieMaster",
+      "language": "en",
+      "url": "https://www.youtube.com/@GhillieMaster",
+      "credit": "@GhillieMaster",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=NKcr4K4cD3Y",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: GhillieMaster. Video: GTA Online: How To Earn 1.1 Million Dollars And a Free Armored Car With The Casino Story Missions",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/ghilliemaster/",
+      "evidence_title": "GTA Online: How To Earn 1.1 Million Dollars And a Free Armored Car With The Casino Story Missions",
+      "workspace_source_id": "b3e33770488f4367"
+    },
+    {
+      "name": "GTA Series Videos",
+      "language": "en",
+      "url": "https://www.youtube.com/@GTASeriesVideos",
+      "credit": "@GTASeriesVideos",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=7ssp44DydyA",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: GTA Series Videos. Video: GTA 5 - Full Game Walkthrough in 4K",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/gta-series-videos/",
+      "evidence_title": "GTA 5 - Full Game Walkthrough in 4K",
+      "workspace_source_id": "920aec37ae1c4eff"
+    },
+    {
+      "name": "Gtamen",
+      "language": "en",
+      "url": "https://www.youtube.com/@Gtamen",
+      "credit": "@Gtamen",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=ktnk7KJP4XY",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Gtamen. Video: I Tried Beating Every GTA Without Dying ONCE",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/gtamen/",
+      "evidence_title": "I Tried Beating Every GTA Without Dying ONCE",
+      "workspace_source_id": "cbb3fc5ce8e44845"
+    },
+    {
+      "name": "HarmNone",
+      "language": "en",
+      "url": "https://www.youtube.com/@HarmNone",
+      "credit": "@HarmNone",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=7KK0NCq0ghg",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: HarmNone. Video: What To BUY & What To AVOID This Week In GTA Online!",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/harmnone/",
+      "evidence_title": "What To BUY & What To AVOID This Week In GTA Online!",
+      "workspace_source_id": "d78390c139024a4b"
+    },
+    {
+      "name": "Jelly",
+      "language": "en",
+      "url": "https://www.youtube.com/@Jelly",
+      "credit": "@Jelly",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=KNo98oZfNIM",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Jelly. Video: I Spent 100 Days in REALISTIC GTA 5",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/jelly/",
+      "evidence_title": "I Spent 100 Days in REALISTIC GTA 5",
+      "workspace_source_id": "58b0e7e8b54540e7"
+    },
+    {
+      "name": "LennyBarn",
+      "language": "en",
+      "url": "https://www.youtube.com/@LennyBarn",
+      "credit": "@LennyBarn",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=rsFIcGn4Bz4",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: LennyBarn. Video: I Spent 30 Days as Stealthy Hitman in GTA 5 RP..",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/lennybarn/",
+      "evidence_title": "I Spent 30 Days as Stealthy Hitman in GTA 5 RP..",
+      "workspace_source_id": "befbfb7e557b4830"
+    },
+    {
+      "name": "Lord_Kebun",
+      "language": "en",
+      "url": "https://kick.com/lordkebun",
+      "credit": "@lordkebun",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=PBv8WAeyiQc",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: LordKebun. Video: MR K Criminal Mastermind 🚨 GTA RP 🚨PRODIGYRP 🚨 Identidad enlazada desde su perfil oficial de Kick a youtube.com/LordKebun.",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/lord-kebun/",
+      "evidence_title": "MR K Criminal Mastermind 🚨 GTA RP 🚨PRODIGYRP 🚨",
+      "identity_url": "https://kick.com/lordkebun/about",
+      "workspace_source_id": "96813dd8f0ab4e6e"
+    },
+    {
+      "name": "MrBossFTW",
+      "language": "en",
+      "url": "https://www.youtube.com/@MrBossFTW",
+      "credit": "@MrBossFTW",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=UDUeZdCT-Yw",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: MrBossFTW. Video: How To Win The Lucky Wheel Podium Car EVERY SINGLE TIME In GTA 5 Online! (UPDATED 2020)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/mrbossftw/",
+      "evidence_title": "How To Win The Lucky Wheel Podium Car EVERY SINGLE TIME In GTA 5 Online! (UPDATED 2020)",
+      "workspace_source_id": "9f4bded6c4a44dea"
+    },
+    {
+      "name": "Nought",
+      "language": "en",
+      "url": "https://www.youtube.com/@NoughtPointFourLIVE",
+      "credit": "@NoughtPointFourLIVE",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=M1h1hP3L1TY",
+      "evidence_note": "Autor y canal confirmados por oEmbed oficial de YouTube. Escenarios narrativos y mods de GTA V; no tomar como gameplay real de GTA 6.",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/nought/",
+      "evidence_title": "From PRISON to the RICHEST MAN in GTA 5!",
+      "workspace_source_id": "77b1ee03c56a4059"
+    },
+    {
+      "name": "Ramee",
+      "language": "en",
+      "url": "https://www.youtube.com/@Ramee",
+      "credit": "@Ramee",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=8iSE06uZfHs",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Ramee. Video: Ramee | Prodigy 2.0 GTA RP",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/ramee/",
+      "evidence_title": "Ramee | Prodigy 2.0 GTA RP",
+      "workspace_source_id": "5c1c2671df7b44f0"
+    },
+    {
+      "name": "SpeirsTheAmazingHD",
+      "language": "en",
+      "url": "https://www.youtube.com/@SpeirsTheAmazingHD",
+      "credit": "@SpeirsTheAmazingHD",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=TbXxNo6tHr4",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: SpeirsTheAmazingHD. Video: Every Time I Crash, The Water Level Rises in GTA 5",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/speirstheamazinghd/",
+      "evidence_title": "Every Time I Crash, The Water Level Rises in GTA 5",
+      "workspace_source_id": "7e539210da274d82"
+    },
+    {
+      "name": "TGG",
+      "language": "en",
+      "url": "https://www.youtube.com/@TGG_",
+      "credit": "@TGG_",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=9nvKTm5A8Gs",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: TGG. Video: GTA Online FOR DUMMIES! Complete SOLO Beginner & Business Guide to Make Money FAST in GTA Online",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/tgg/",
+      "evidence_title": "GTA Online FOR DUMMIES! Complete SOLO Beginner & Business Guide to Make Money FAST in GTA Online",
+      "workspace_source_id": "6b0c2b20af6246fa"
+    },
+    {
+      "name": "Treyten",
+      "language": "en",
+      "url": "https://www.youtube.com/@Treyten.",
+      "credit": "@Treyten.",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=WyUdpgHxk7I",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Treyten. Video: Opening An Illegal Dealership In GTA 5 RP",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/treyten/",
+      "evidence_title": "Opening An Illegal Dealership In GTA 5 RP",
+      "workspace_source_id": "818f781dd1064c24"
+    },
+    {
+      "name": "Tylarious",
+      "language": "en",
+      "url": "https://www.youtube.com/@Tylarious",
+      "credit": "@Tylarious",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=fdJawmG5c7k",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Tylarious. Video: GTA Online - Best Beginners Guide To GTA Online (GTA For Dummies)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/tylarious/",
+      "evidence_title": "GTA Online - Best Beginners Guide To GTA Online (GTA For Dummies)",
+      "workspace_source_id": "0aecb89cb1f6482c"
+    },
+    {
+      "name": "Vadact",
+      "language": "en",
+      "url": "https://www.youtube.com/@Vadact",
+      "credit": "@Vadact",
+      "category": "especialista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=y4zxbk61T68",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Vadact. Video: Every KILL I Become a New SCP in GTA 5 RP",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/vadact/",
+      "evidence_title": "Every KILL I Become a New SCP in GTA 5 RP",
+      "workspace_source_id": "8c2bd5402abd4e2a"
+    },
+    {
+      "name": "Ali-A",
+      "language": "en",
+      "url": "https://www.youtube.com/@AliA",
+      "credit": "@AliA",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=qdkOt-DQndY",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Ali-A. Video: GTA 5 CHEATS Gameplay - CARS, SLOW-MO, PARACHUTE & MORE! (Grand Theft Auto V Cheat Codes)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/ali-a/",
+      "evidence_title": "GTA 5 CHEATS Gameplay - CARS, SLOW-MO, PARACHUTE & MORE! (Grand Theft Auto V Cheat Codes)",
+      "workspace_source_id": "f5151d99e3054f4d"
+    },
+    {
+      "name": "BasicallyIDoWrk",
+      "language": "en",
+      "url": "https://www.youtube.com/@BasicallyIDoWrk",
+      "credit": "@BasicallyIDoWrk",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=W-5ORHeoMTU",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: BasicallyIDoWrk. Video: GTA 5 Next Gen - Spooky Murder Cave! (Funny Moments)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/basicallyidowrk/",
+      "evidence_title": "GTA 5 Next Gen - Spooky Murder Cave! (Funny Moments)",
+      "workspace_source_id": "cb35dd6e8cd24a88"
+    },
+    {
+      "name": "CaRtOoNz",
+      "language": "en",
+      "url": "https://www.youtube.com/@CaRtOoNz",
+      "credit": "@CaRtOoNz",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=YXR78CNqyWw",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: CaRtOoNz. Video: GTA V - Funny Moments II (Fire Trucks, Phone Booths, and Bad Trailers)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/cartoonz/",
+      "evidence_title": "GTA V - Funny Moments II (Fire Trucks, Phone Booths, and Bad Trailers)",
+      "workspace_source_id": "47eda62525d44644"
+    },
+    {
+      "name": "DashieGames",
+      "language": "en",
+      "url": "https://www.youtube.com/@DashieGames",
+      "credit": "@DashieGames",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=bqbq1DqWZVM",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: DashieGames. Video: FUNNIEST GTA 5 GAMEPLAY EVER!? [MADNESS]",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/dashiegames/",
+      "evidence_title": "FUNNIEST GTA 5 GAMEPLAY EVER!? [MADNESS]",
+      "workspace_source_id": "8bb173054cf24cb4"
+    },
+    {
+      "name": "H2ODelirious",
+      "language": "en",
+      "url": "https://www.youtube.com/@H2ODelirious",
+      "credit": "@H2ODelirious",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=if0sTH-Mjms",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: H2ODelirious. Video: CRAZY LIGHTING STORM MISSION! 🌩 | GTA 5 Online",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/h2odelirious/",
+      "evidence_title": "CRAZY LIGHTING STORM MISSION! 🌩 | GTA 5 Online",
+      "workspace_source_id": "1819408767d74fa4"
+    },
+    {
+      "name": "jacksepticeye",
+      "language": "en",
+      "url": "https://www.youtube.com/@jacksepticeye",
+      "credit": "@jacksepticeye",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=gn7T9o8jYQo",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: jacksepticeye. Video: Grand Theft Auto V | JEWELLERY STORE HEIST | PS3 HD Gameplay",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/jacksepticeye/",
+      "evidence_title": "Grand Theft Auto V | JEWELLERY STORE HEIST | PS3 HD Gameplay",
+      "workspace_source_id": "e76bbee87c944773"
+    },
+    {
+      "name": "Kwebbelkop",
+      "language": "en",
+      "url": "https://www.youtube.com/@kwebbelkop",
+      "credit": "@kwebbelkop",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=npZPhkz8xMc",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Kwebbelkop. Video: ULTIMATE $10,000,000 YACHT TOUR! (GTA 5 DLC)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/kwebbelkop/",
+      "evidence_title": "ULTIMATE $10,000,000 YACHT TOUR! (GTA 5 DLC)",
+      "workspace_source_id": "8c598f7df1664e14"
+    },
+    {
+      "name": "Lirik",
+      "language": "en",
+      "url": "https://www.youtube.com/@lirik",
+      "credit": "@lirik",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=X82WzfO_02k",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Lirik. Video: GTA 5: Instant Karma",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/lirik/",
+      "evidence_title": "GTA 5: Instant Karma",
+      "workspace_source_id": "cdabfbd5d5b14a11"
+    },
+    {
+      "name": "Nogla",
+      "language": "en",
+      "url": "https://www.youtube.com/@DaithiDeNogla",
+      "credit": "@DaithiDeNogla",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=LVmSL767GLU",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Nogla. Video: GTA 5 Online Moments That Feel Like 2013",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/nogla/",
+      "evidence_title": "GTA 5 Online Moments That Feel Like 2013",
+      "workspace_source_id": "3a164fb4108244f6"
+    },
+    {
+      "name": "Slogo",
+      "language": "en",
+      "url": "https://www.youtube.com/@slogo",
+      "credit": "@slogo",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=5XnaYwW-f_A",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Slogo. Video: NEW $4,950,000 MEGA DRIFT Car! (GTA 5 DLC)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/slogo/",
+      "evidence_title": "NEW $4,950,000 MEGA DRIFT Car! (GTA 5 DLC)",
+      "workspace_source_id": "03d2ff631500416e"
+    },
+    {
+      "name": "SMii7Y",
+      "language": "en",
+      "url": "https://www.youtube.com/@SMii7Y",
+      "credit": "@SMii7Y",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=_SszdE389n0",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: SMii7Y. Video: Modded GTA 5 Sumo Matches were a fantastic idea",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/smii7y/",
+      "evidence_title": "Modded GTA 5 Sumo Matches were a fantastic idea",
+      "workspace_source_id": "2a08ca44353249db"
+    },
+    {
+      "name": "Sodapoppin",
+      "language": "en",
+      "url": "https://www.youtube.com/@sodapoppin",
+      "credit": "@sodapoppin",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=eB6f-Ij7KAI",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Sodapoppin. Video: Sodapoppin's FIRST TIME role playing! Life of Kevin - GTA V (Episode 1)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/sodapoppin/",
+      "evidence_title": "Sodapoppin's FIRST TIME role playing! Life of Kevin - GTA V (Episode 1)",
+      "workspace_source_id": "436d54f6f8224cce"
+    },
+    {
+      "name": "summit1g",
+      "language": "en",
+      "url": "https://www.youtube.com/@summit1g",
+      "credit": "@summit1g",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=RmcoN7TwOJo",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: summit1g. Video: Chang Gang is Back to Robbing Banks best moments - GTA V RP",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/summit1g/",
+      "evidence_title": "Chang Gang is Back to Robbing Banks best moments - GTA V RP",
+      "workspace_source_id": "c026eb66e9f14904"
+    },
+    {
+      "name": "Sykkuno",
+      "language": "en",
+      "url": "https://www.youtube.com/@Sykkuno",
+      "credit": "@Sykkuno",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=XcXizqfchPs",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Sykkuno. Video: All that for a hamburger... | GTA 5 Roleplay",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/sykkuno/",
+      "evidence_title": "All that for a hamburger... | GTA 5 Roleplay",
+      "workspace_source_id": "4067a228462a4082"
+    },
+    {
+      "name": "Terroriser",
+      "language": "en",
+      "url": "https://www.youtube.com/@Terroriser",
+      "credit": "@Terroriser",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=n3KONROJvF4",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Terroriser. Video: VANOSS invites me to do GTA5 HEISTS again!",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/terroriser/",
+      "evidence_title": "VANOSS invites me to do GTA5 HEISTS again!",
+      "workspace_source_id": "5787a709381c4165"
+    },
+    {
+      "name": "theRadBrad",
+      "language": "en",
+      "url": "https://www.youtube.com/@theRadBrad",
+      "credit": "@theRadBrad",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=R2iXM57_S9Q",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: theRadBrad. Video: Grand Theft Auto 5 Gameplay Walkthrough Part 2 - Repossession (GTA 5)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/theradbrad/",
+      "evidence_title": "Grand Theft Auto 5 Gameplay Walkthrough Part 2 - Repossession (GTA 5)",
+      "workspace_source_id": "64d624587089468d"
+    },
+    {
+      "name": "Typical Gamer",
+      "language": "en",
+      "url": "https://www.youtube.com/@TypicalGamer",
+      "credit": "@TypicalGamer",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=8sOpjk_9fD8",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Typical Gamer. Video: GTA 5 - All 50 Spaceship Parts Location Guide (GTA V)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/typical-gamer/",
+      "evidence_title": "GTA 5 - All 50 Spaceship Parts Location Guide (GTA V)",
+      "workspace_source_id": "a198165dca794e77"
+    },
+    {
+      "name": "VanossGaming",
+      "language": "en",
+      "url": "https://www.youtube.com/@VanossGaming",
+      "credit": "@VanossGaming",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=ADmePCwoSko",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: VanossGaming. Video: GTA 5 Online Funny Moments - Bullet Proof Helmet, Trolling Ohm, ATV Fun!",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/vanossgaming/",
+      "evidence_title": "GTA 5 Online Funny Moments - Bullet Proof Helmet, Trolling Ohm, ATV Fun!",
+      "workspace_source_id": "b19986b2e2b74824"
+    },
+    {
+      "name": "Vikkstar123",
+      "language": "en",
+      "url": "https://www.youtube.com/@Vikkstar123",
+      "credit": "@Vikkstar123",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=8EIEM3p0NjA",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: Vikkstar123. Video: GTA 5 Online Gameplay - GTA V Multiplayer First Impressions",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/vikkstar123/",
+      "evidence_title": "GTA 5 Online Gameplay - GTA V Multiplayer First Impressions",
+      "workspace_source_id": "7277ab7a953743ce"
+    },
+    {
+      "name": "WILDCAT",
+      "language": "en",
+      "url": "https://www.youtube.com/@wildcat",
+      "credit": "@wildcat",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=9eIX4HUkYEs",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: WILDCAT. Video: GTA 5 Online Funny Moments! - EXTREME RAGE! (Every Bullet Counts Funny Gameplay)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/wildcat/",
+      "evidence_title": "GTA 5 Online Funny Moments! - EXTREME RAGE! (Every Bullet Counts Funny Gameplay)",
+      "workspace_source_id": "3570bdc5574b4979"
+    },
+    {
+      "name": "xQc",
+      "language": "en",
+      "url": "https://www.youtube.com/@xQcOW",
+      "credit": "@xQcOW",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA RP"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=wU8mqMhqzps",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: xQc. Video: xQc Plays Grand Theft Auto V (GTA 5)",
+      "popularity": "masivo",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/xqc/",
+      "evidence_title": "xQc Plays Grand Theft Auto V (GTA 5)",
+      "workspace_source_id": "b55e430ab53d41c2"
+    },
+    {
+      "name": "Zerkaa",
+      "language": "en",
+      "url": "https://www.youtube.com/@ZerkaaPlays",
+      "credit": "@ZerkaaPlays",
+      "category": "generalista",
+      "gta_focus": [
+        "GTA V",
+        "GTA Online"
+      ],
+      "evidence_url": "https://www.youtube.com/watch?v=BWu1pS6P8Mw",
+      "evidence_note": "Autor confirmado por oEmbed oficial de YouTube: ZerkaaPlays. Video: GTA V Online Glitch | Exploring North Yankton (Secret/Hidden Area) (GTA 5)",
+      "popularity": "grande",
+      "current_activity": "historica",
+      "verification_date": "2026-11-17",
+      "evidence_method": "YouTube oEmbed: title, author_name y author_url",
+      "discovery_url": "https://totalgta.com/creators/zerkaa/",
+      "evidence_title": "GTA V Online Glitch | Exploring North Yankton (Secret/Hidden Area) (GTA 5)",
+      "workspace_source_id": "f3695d18efe7463b"
+    }
+  ]
+}

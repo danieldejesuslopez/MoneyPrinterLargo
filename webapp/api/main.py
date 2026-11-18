@@ -159,9 +159,15 @@ async def lifespan(app: FastAPI):
         _auto_sync_scheduler.start()
     except Exception as e:
         print(f"[main] WARN: could not start auto-sync scheduler: {e}", flush=True)
+    gta_scheduler = gta6_router_mod.autopilot_scheduler()
+    gta_scheduler.start()
+    hermes_supervisor = asyncio.create_task(gta6_router_mod.hermes_control.supervise(gta6_router_mod.workspace))
     try:
         yield
     finally:
+        hermes_supervisor.cancel()
+        await asyncio.gather(hermes_supervisor, return_exceptions=True)
+        await gta_scheduler.stop()
         if _auto_sync_scheduler is not None:
             try:
                 await _auto_sync_scheduler.stop()
@@ -303,6 +309,9 @@ def _channel_out(acc: dict) -> dict:
         "hook_profile": acc.get("hook_profile", ""),
         "voice_drama": acc.get("voice_drama", False),
         "youtube_handle": acc.get("youtube_handle", ""),
+        "automation_profile_verified": acc.get("automation_profile_verified"),
+        "gta6_managed": bool(acc.get("gta6_managed")),
+        "upload_disabled_reason": acc.get("upload_disabled_reason", ""),
         "videos_count": len(acc.get("videos", []) or []),
         # Populated by scripts/sync_youtube_cache.py. `null` means the channel
         # has never been synced; the frontend renders that as a muted "—".
@@ -485,7 +494,13 @@ def update_channel(channel_id: str, payload: YouTubeChannelIn):
     raw = _read_youtube_raw()
     for acc in raw.get("accounts", []):
         if acc.get("id") == channel_id:
-            acc.update(payload.model_dump())
+            changes = payload.model_dump()
+            if acc.get("gta6_managed") and any(changes.get(key, "") != acc.get(key, "") for key in ("firefox_profile", "youtube_handle")):
+                acc["automation_profile_verified"] = False
+                acc["upload_disabled_reason"] = "Se cambió el perfil o handle. Confirma su asociación en GTA 6 → Noticias narradas."
+                if changes.get("youtube_handle", "") != acc.get("youtube_handle", ""):
+                    acc["youtube_channel_id"] = ""
+            acc.update(changes)
             _write_youtube_raw(raw)
             return _channel_out(acc)
     raise HTTPException(404, "Channel not found")
@@ -768,7 +783,7 @@ _CONFIG_FIELD_DEFS = [
     {"key": "font", "label": "Subtitle font filename", "type": "str", "group": "Core"},
     {"key": "script_sentence_length", "label": "Script sentence length", "type": "int", "group": "Core"},
     # LLM
-    {"key": "llm_provider", "label": "LLM provider (openai / claude / gemini / ollama / pollinations)", "type": "str", "group": "LLM"},
+    {"key": "llm_provider", "label": "LLM provider (openai / claude / codex / gemini / ollama / pollinations)", "type": "str", "group": "LLM"},
     {"key": "image_provider", "label": "AI image provider (auto / leonardo / openai / gemini)", "type": "str", "group": "Image"},
     {"key": "photo_vision_provider", "label": "Uploaded-photo vision (auto / gemini / codex / claude / openai)", "type": "str", "group": "LLM"},
     {"key": "openai_api_key", "label": "OpenAI API key", "type": "secret", "group": "LLM"},
@@ -844,7 +859,7 @@ _OPENAI_MODEL_CATALOG = [
 ]
 
 _GEMINI_MODEL_CATALOG = [
-    {"id": "gemini-3-pro-preview", "label": "Gemini 3 Pro Preview", "provider": "gemini",
+    {"id": "gemini-3.1-pro-preview", "label": "Gemini 3.1 Pro Preview", "provider": "gemini",
      "description": "Mayor calidad para guiones largos y razonamiento."},
     {"id": "gemini-3-flash-preview", "label": "Gemini 3 Flash (preview)", "provider": "gemini",
      "description": "Default — más reciente, mejor balance velocidad/calidad."},
@@ -2609,6 +2624,25 @@ async def generate_thumbnail(topic: str, text: str, visual: str = ""):
 @app.get("/api/health")
 def health():
     return {"ok": True, "ts": datetime.utcnow().isoformat() + "Z"}
+
+
+# ---------------------------------------------------------------------------
+# Clips (src/clips) — catalogue, trends and live runs on the shared job system
+# ---------------------------------------------------------------------------
+try:
+    from . import clips_api as clips_router_mod  # noqa: E402
+except ImportError:
+    import clips_api as clips_router_mod  # type: ignore  # noqa: E402
+clips_router_mod.bind_jobs(_spawn_job, _stream_job)
+app.include_router(clips_router_mod.router)
+
+# GTA 6 editorial workspace, sharing providers, clips and job progress.
+try:
+    from . import gta6_api as gta6_router_mod
+except ImportError:
+    import gta6_api as gta6_router_mod
+gta6_router_mod.bind_jobs(_spawn_job)
+app.include_router(gta6_router_mod.router)
 
 
 # Allow `python webapp/api/main.py` for convenience

@@ -13,6 +13,9 @@ import {
   ImagePlus,
   Activity,
   Clapperboard,
+  Scissors,
+  ListVideo,
+  Gamepad2,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -49,7 +52,10 @@ const NAV: NavGroup[] = [
   {
     section: "Produccion",
     items: [
+      { to: "/gta6", label: "GTA 6", icon: Gamepad2 },
       { to: "/higgsfield", label: "Higgsfield Studio", icon: Clapperboard },
+      { to: "/clips", label: "Clips", icon: Scissors, end: true },
+      { to: "/clips/continuados", label: "Clips continuados", icon: ListVideo },
     ],
   },
   {
@@ -178,13 +184,10 @@ export function Sidebar() {
 }
 
 export function MobileNav() {
-  const items = [
-    NAV[0].items[0],
-    NAV[0].items[1],
-    NAV[1].items[0],
-    NAV[2].items[4],
-    NAV[3].items[1],
-  ];
+  const navItems = NAV.flatMap((group) => group.items);
+  const items = ["/", "/generate", "/channels", "/gta6", "/settings"]
+    .map((to) => navItems.find((item) => item.to === to))
+    .filter((item): item is NavItem => item !== undefined);
 
   return (
     <nav className="lg:hidden fixed inset-x-3 bottom-3 z-30 rounded-2xl glass px-2 py-2">

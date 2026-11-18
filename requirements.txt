@@ -3,6 +3,7 @@ termcolor
 schedule
 kittentts @ https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl
 soundfile
+edge-tts>=7.3.1
 prettytable
 webdriver_manager
 selenium_firefox
@@ -10,10 +11,14 @@ selenium
 ollama
 moviepy
 Pillow>=10.0.0
+opencv-python-headless>=4.8,<5
 yagmail
 assemblyai
 faster-whisper
 srt_equalizer
 undetected_chromedriver
 platformdirs
+tzdata>=2025.2
 num2words
+streamlink>=8.6,<9
+playwright>=1.50,<2

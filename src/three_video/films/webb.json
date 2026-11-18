@@ -1,0 +1,79 @@
+{
+  "title": "Why Webb Saw One Star 18 Times",
+  "episode": "webb",
+  "module": "kinetics.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "voice": "en-GB-RyanNeural",
+  "location": "JAMES WEBB SPACE TELESCOPE",
+  "credit": "NASA Webb Mission Team",
+  "sources": [
+    "https://science.nasa.gov/mission/webb/webbs-mirrors/",
+    "https://science.nasa.gov/blogs/webb/2022/01/07/primary-mirror-deployment-has-begun/",
+    "https://science.nasa.gov/mission/webb/faqs-full/"
+  ],
+  "chapters": [
+    "One star, 18 images",
+    "Built to catch faint light",
+    "Fold for the rocket",
+    "Open the wings",
+    "Why the gold?",
+    "A second mirror",
+    "One target, many spots",
+    "Which spot belongs where?",
+    "Motion behind the gold",
+    "Stack the images",
+    "Bring the waves together",
+    "One collecting surface"
+  ],
+  "cues": [
+    [
+      0.15,
+      "The James Webb Space Telescope pointed at a single star. Its camera found eighteen blurry versions of it. That was exactly the clue the engineers needed. Each patch of light had come from a different mirror."
+    ],
+    [
+      15.15,
+      "Webb gathers infrared light from space. Its primary mirror stretches about six and a half metres across. A collecting surface that wide can gather faint light, but it also has to fit inside a rocket for launch."
+    ],
+    [
+      30.15,
+      "Look at the two outer wings. Each carries three hexagonal mirror segments. Engineers folded the wings back so the telescope could fit inside its rocket. The rest of the mirror rode in the central section."
+    ],
+    [
+      45.15,
+      "After launch, the team released the first wing, drove it into position, and latched it. Then the opposite wing followed. The result looked like a single golden honeycomb. Optically, the job had barely begun."
+    ],
+    [
+      60.15,
+      "Each hexagon is made of beryllium, a material that is stiff and light for its size. A thin coating of gold improves the reflection of infrared light. The colour you see is a surface coating."
+    ],
+    [
+      75.15,
+      "Trace the path in this cutaway. Light strikes a gold segment and travels to the smaller secondary mirror held out in front. From there it goes back through the opening at the centre and on towards the instruments."
+    ],
+    [
+      90.15,
+      "If two segments point in slightly different directions, they send the image of the same star to different places. With eighteen segments out of alignment, the infrared camera could pick up eighteen separate patches."
+    ],
+    [
+      105.15,
+      "Engineers needed to know which patch belonged to which segment. They moved the segments individually and watched which image shifted. That turned a field of scattered points into a map of eighteen adjustable mirrors."
+    ],
+    [
+      120.15,
+      "Look behind one segment. Actuators make small changes to its position and orientation, and another adjustment changes its curvature. Those movements let engineers steer each image towards a common location."
+    ],
+    [
+      135.15,
+      "Now watch the camera view as the separate star images move together. Stacking puts them in the same place. A spot that appears single can still be blurry, because the arriving light waves also need to line up."
+    ],
+    [
+      150.15,
+      "The team analysed images taken with deliberately different focus settings. From the patterns, they calculated finer corrections for the segments. The target was alignment to within tens of nanometres, a tiny fraction of a millimetre."
+    ],
+    [
+      165.15,
+      "Return to the star. The telescope still has eighteen separate gold segments, with gaps you can see between them. But their light now comes together as if collected by a single mirror, six and a half metres across."
+    ]
+  ]
+}

@@ -47,6 +47,10 @@ interface ProgressDialogProps {
   description?: string;
   /** SSE endpoint URL. When the dialog opens, an EventSource connects here. */
   sseUrl: string | null;
+  /** Upload jobs can attach directly without showing render actions. */
+  initialPhase?: "generate" | "upload";
+  /** Optional neutral message for jobs that may finish needing review. */
+  successMessage?: string;
   /** If provided, post-generation actions (revisar / subir) are shown for this channel. */
   channelId?: string;
   /** Kind of content being generated — required so upload-last picks the right YouTube flow. */
@@ -420,6 +424,8 @@ export function ProgressDialog({
   title,
   description,
   sseUrl,
+  initialPhase = "generate",
+  successMessage,
   channelId,
   kind = "short",
   previewOnFinish = false,
@@ -434,7 +440,7 @@ export function ProgressDialog({
   const [generatedFile, setGeneratedFile] = useState<string | null>(null);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [activeUrl, setActiveUrl] = useState<string | null>(null);
-  const [phase, setPhase] = useState<"generate" | "upload">("generate");
+  const [phase, setPhase] = useState<"generate" | "upload">(initialPhase);
   const [stickToBottom, setStickToBottom] = useState(true);
   const [renderProgress, setRenderProgress] = useState<RenderProgress | null>(null);
   const esRef = useRef<EventSource | null>(null);
@@ -549,7 +555,7 @@ export function ProgressDialog({
       setStatus("done");
       es.close();
       onDoneRef.current?.();
-      toast.success(phase === "upload" ? "Video subido" : "Render completado");
+      toast.success(successMessage || (phase === "upload" ? "Video subido" : "Render completado"));
     });
     es.addEventListener("error", (ev) => {
       try {
@@ -569,12 +575,12 @@ export function ProgressDialog({
       es.close();
       esRef.current = null;
     };
-  }, [open, activeUrl, phase]);
+  }, [open, activeUrl, phase, successMessage]);
 
   // Initial sseUrl → activeUrl mirror when the dialog opens.
   useEffect(() => {
     if (open && sseUrl) {
-      setPhase("generate");
+      setPhase(initialPhase);
       setActiveUrl(sseUrl);
     }
     if (!open) {
@@ -587,7 +593,7 @@ export function ProgressDialog({
       previewAutoOpenedRef.current = false;
       uploadOnPreviewCloseRef.current = false;
     }
-  }, [open, sseUrl]);
+  }, [open, sseUrl, initialPhase]);
 
   // When the render finishes and the user asked for a preview at the end,
   // auto-open the preview modal once. Remember whether closing it should

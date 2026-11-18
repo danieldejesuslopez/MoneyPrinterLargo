@@ -1,0 +1,58 @@
+{
+  "title": "Lost Property, Tomorrow",
+  "module": "nightshift.js",
+  "episode": "tomorrow",
+  "duration": 180,
+  "aspect": "9:16",
+  "voice": "en-GB-RyanNeural",
+  "cues": [
+    [
+      0.12,
+      "The first thing the locker gave June was her own umbrella. Which was odd, because she was still holding it. Same yellow handle. Same tooth marks from a dog that hated rain."
+    ],
+    [
+      15.12,
+      "June ran lost property at North Street station. She'd matched a single shoe to a passenger by the sound of his walk. Two identical umbrellas bothered her enough to check the label."
+    ],
+    [
+      30.12,
+      "It had tomorrow's date. Six fourteen in the morning. She put the spare back in locker nine, locked the door, and took hers home. Fine. Let's see what happens tomorrow."
+    ],
+    [
+      45.12,
+      "At six fourteen, a train door caught the yellow handle. Her umbrella went off to work without her. Back at the office, locker nine stood open. Inside was an entirely different problem."
+    ],
+    [
+      60.12,
+      "A red lunch tin. Under the lid, someone had scratched a phone number. June called it. An old man answered. He was packing his lunch right then. Cheese and pickle. Why?"
+    ],
+    [
+      75.12,
+      "She told him to write his name on the tin. The next morning, a cleaner brought it in. Name on top, cheese still inside. This time she knew exactly who to call."
+    ],
+    [
+      90.12,
+      "For a week it felt like a wonderful little cheat. Mittens went home in pairs. A musician got her trumpet back before the first rehearsal. Then the locker printed a label without an object."
+    ],
+    [
+      105.12,
+      "North Street. Friday. Eleven fifty-eight at night. June turned the label over. In tiny letters, under description, it said: last chance. She checked the timetable. Friday was the station's final night."
+    ],
+    [
+      120.12,
+      "At closing time an old man sat on the platform, holding his red tin. Inside were two sandwiches. Every Friday for thirty years, he'd met his brother there after the late shift."
+    ],
+    [
+      135.12,
+      "His brother had stopped coming in April. A stupid argument, he said. Couldn't even remember who started it. June looked at the phone number scratched inside the lid. Whose handwriting is that?"
+    ],
+    [
+      150.12,
+      "At eleven fifty-eight the last train pulled in. A man stepped onto the platform, phone in one hand. In the other, a jar of pickle. Neither brother said sorry. They just split the sandwiches."
+    ],
+    [
+      165.12,
+      "June locked up. For the first time in a week, locker nine was empty. She peeled the last chance label off her sleeve. On the way home it started raining. Of course it did."
+    ]
+  ]
+}

@@ -1,3 +1,10 @@
+import sys
+
+if __name__ == "__main__" and sys.argv[1:2] == ["--three"]:
+    from three_video.production import cli
+    cli(sys.argv[2:])
+    sys.exit(0)
+
 import schedule
 import subprocess
 import os
@@ -901,6 +908,13 @@ def main():
         outreach = Outreach()
 
         outreach.start()
+    elif user_input == 6:
+        import runpy
+        module = runpy.run_path(os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts", "gta6.py"))
+        module["interactive"]()
+    elif user_input == 7:
+        from three_video.production import cli
+        cli([])
     elif user_input == 5:
         if get_verbose():
             print(colored(" => Quitting...", "blue"))
@@ -946,6 +960,13 @@ if __name__ == "__main__":
         else:
             models = get_openai_models()
             success(f"Using OpenAI LLM (cascade: {' → '.join(models)})")
+    elif llm_provider == "claude":
+        from config import get_claude_cli_models
+        models = get_claude_cli_models()
+        success(f"Using Claude Code CLI (cascade: {' → '.join(models)})")
+    elif llm_provider == "codex":
+        from config import get_codex_cli_model
+        success(f"Using Codex CLI: {get_codex_cli_model() or 'CLI default'}")
     elif llm_provider == "pollinations":
         from config import get_pollinations_text_model
         success(f"Using Pollinations LLM: {get_pollinations_text_model()}")

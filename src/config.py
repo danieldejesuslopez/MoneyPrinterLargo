@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import glob
 import shutil
 import srt_equalizer
 
@@ -547,6 +548,17 @@ def _resolve_cli_command(value: str, default_name: str) -> str:
     base_name = os.path.basename(root or value).lower()
     if localappdata and base_name == "codex":
         candidates.append(os.path.join(localappdata, "OpenAI", "Codex", "bin", "codex.exe"))
+        # The Windows installer keeps the real binary in a per-version folder
+        # (LOCALAPPDATA/OpenAI/Codex/bin/<build>/codex.exe) and never puts it
+        # PATH, so resolve it ourselves, newest build first.
+        try:
+            versioned = glob.glob(
+                os.path.join(localappdata, "OpenAI", "Codex", "bin", "*", "codex.exe")
+            )
+            versioned.sort(key=os.path.getmtime, reverse=True)
+            candidates.extend(versioned)
+        except OSError:
+            pass
 
     for candidate in candidates:
         resolved = shutil.which(candidate)

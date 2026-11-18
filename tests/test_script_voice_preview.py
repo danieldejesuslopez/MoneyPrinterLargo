@@ -2,6 +2,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
@@ -13,7 +15,7 @@ from classes.ScriptVoicePreview import (
     ScriptVoicePreview,
     ScriptVoicePreviewConfig,
 )
-from classes.Tts import LONG_VIDEO_NARRATOR
+from classes.Tts import LONG_VIDEO_NARRATOR, SHORT_VIDEO_NARRATOR
 
 
 class FakeTTS:
@@ -77,6 +79,37 @@ def test_short_voice_preview_uses_same_retention_voice_settings(tmp_path):
     sidecar = json.loads(Path(result.sidecar_path).read_text(encoding="utf-8"))
     assert sidecar["audio_path"] == result.audio_path
     assert sidecar["word_count"] == result.word_count
+
+
+@pytest.mark.parametrize("use_english_global_voice", [False, True], ids=["minimal-fake", "jasper-global"])
+def test_short_voice_preview_guards_empty_voice_for_spanish_channel(
+    tmp_path, monkeypatch, use_english_global_voice
+):
+    fake_tts = FakeTTS()
+    if use_english_global_voice:
+        fake_tts._provider = "edge_tts"
+        fake_tts._voice = "Jasper"
+    monkeypatch.setattr(
+        "classes.ScriptVoicePreview._audio_duration_seconds", lambda audio_path: 0.2
+    )
+    preview = ScriptVoicePreview(
+        config=ScriptVoicePreviewConfig(language="espanol", short_voice=""),
+        tts_instance=fake_tts,
+        output_dir=tmp_path,
+    )
+
+    result = preview.synthesize(
+        subject="Historia",
+        script="La ciudad cambio para siempre.",
+        preview_id="spanish-empty-voice",
+    )
+
+    assert result.voice_id == SHORT_VIDEO_NARRATOR
+    assert len(fake_tts.short_calls) == 1
+    assert fake_tts.short_calls[0]["voice_id"] == SHORT_VIDEO_NARRATOR
+    assert Path(result.audio_path).is_file()
+    sidecar = json.loads(Path(result.sidecar_path).read_text(encoding="utf-8"))
+    assert sidecar["voice_id"] == SHORT_VIDEO_NARRATOR
 
 
 def test_long_voice_preview_falls_back_to_spanish_narrator(tmp_path):

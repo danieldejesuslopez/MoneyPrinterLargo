@@ -129,6 +129,31 @@ _OLLAMA_FALLBACK_CHAIN: list[str] = [
     "glm-5.1:cloud",
 ]
 
+# Every text backend `generate_text` knows how to reach.
+_TEXT_PROVIDERS: tuple[str, ...] = (
+    "gemini", "ollama", "claude", "codex", "openai", "pollinations",
+)
+
+# Order the automatic cascade walks when a provider fails: the selected
+# provider runs first, then the rest of this list in order.
+#
+# Claude Code and Codex lead. Both talk to a locally authenticated CLI
+# subscription, so they keep working when the API keys are out of credit
+# (HTTP 402) and the Ollama daemon is down -- exactly the situation that left
+# the clips pipeline scoring on heuristics only.
+#
+# Gemini is last by explicit request: that API key is out of credit, so every
+# attempt costs two dead HTTP calls before the cascade moves on. The 404
+# refill in `_generate_text_gemini` means a pinned model going missing no
+# longer takes the provider down for the session, so parking it at the end is
+# safe -- it still runs if everything above it fails.
+#
+# `openai` is deliberately absent from the automatic tail: it needs a paid
+# API key, so it only runs when it is the provider the user selected.
+_AUTO_FALLBACK_ORDER: tuple[str, ...] = (
+    "claude", "codex", "ollama", "pollinations", "gemini",
+)
+
 # Curated catalog shown by the interactive selector even when the model
 # isn't installed locally yet. The user can pick any of these â€” Ollama
 # auto-pulls on first run (see `warmup_ollama_model`). Cloud entries
@@ -177,7 +202,7 @@ RECOMMENDED_OLLAMA_MODELS: list[tuple[str, str]] = [
 #   - ARC-AGI-2 (Gemini 3.1 Pro: 77.1%)
 #   - GPQA Diamond / SWE-bench (Gemini 3 Flash: 90.4% / 78%)
 RECOMMENDED_GEMINI_MODELS: list[tuple[str, str]] = [
-    ("gemini-3-pro-preview",         "Gemini 3 Pro Preview â€” highest quality"),
+    ("gemini-3.1-pro-preview",       "Gemini 3.1 Pro Preview â€” highest quality"),
     ("gemini-3-flash-preview",       "Gemini 3 Flash Preview â€” frontier fast"),
     ("gemini-2.5-pro",               "Gemini 2.5 Pro â€” stable high quality"),
     ("gemini-2.5-flash",             "Gemini 2.5 Flash â€” stable fast"),
@@ -280,6 +305,11 @@ def list_models() -> list[str]:
         return get_openai_models()
     if provider == "claude":
         return get_claude_cli_models()
+    if provider == "codex":
+        # No placeholder here: an empty list means "whatever the Codex CLI
+        # defaults to", and anything we return gets passed as `--model`.
+        configured = get_codex_cli_model()
+        return [configured] if configured else []
     response = _ollama_client().list()
     return sorted(m.model for m in response.models)
 
@@ -454,64 +484,42 @@ _SYSTEM_PROMPT = (
 
 def generate_text(prompt: str, model_name: str = None, temperature: float = 0.7) -> str:
     provider = (_llm_provider or get_llm_provider() or "").lower()
+    chosen_model = model_name or _selected_model
+
+    def _call(name: str, pinned: bool):
+        """Build the zero-arg call for one provider in the cascade.
+
+        `pinned` is true only for the provider the user actually selected: a
+        model id like "gemini-3-flash-preview" must never be handed to a
+        fallback provider that has never heard of it.
+        """
+        model = chosen_model if pinned else None
+        if name == "gemini":
+            return lambda: _generate_text_gemini(prompt, model=model, temperature=temperature)
+        if name == "ollama":
+            return lambda: _generate_text_ollama(prompt, model)
+        if name == "claude":
+            return lambda: _generate_text_claude_cli(prompt, model)
+        if name == "codex":
+            return lambda: _generate_text_codex_cli(prompt, model)
+        if name == "openai":
+            return lambda: _generate_text_openai(prompt, model, temperature=temperature)
+        if name == "pollinations":
+            return lambda: _generate_text_pollinations(prompt, model)
+        raise RuntimeError(f"unknown LLM provider '{name}'")
+
+    primary = provider if provider in _TEXT_PROVIDERS else "ollama"
 
     # When the user explicitly chose a provider from the UI, do NOT cross-
-    # fallback to the other one. Pick Gemini â†’ only Gemini; pick OpenAI â†’ only
-    # OpenAI; pick Ollama â†’ only Ollama (its internal model cascade still
-    # applies). The auto path keeps the historical cross-provider safety net.
+    # fallback to another one: pick Gemini -> only Gemini, pick Codex -> only
+    # Codex. Each provider's own internal model cascade still applies. The
+    # auto path keeps the cross-provider safety net.
     if _user_override:
-        if provider == "gemini":
-            # Pin to the model the user explicitly chose; if none, fall back
-            # to the configured cascade (mirrors Ollama's behaviour).
-            providers = [
-                ("gemini", lambda: _generate_text_gemini(
-                    prompt,
-                    model=model_name or _selected_model or None,
-                    temperature=temperature,
-                )),
-            ]
-        elif provider == "claude":
-            providers = [("claude", lambda: _generate_text_claude_cli(prompt, model_name or _selected_model))]
-        elif provider == "openai":
-            providers = [("openai", lambda: _generate_text_openai(prompt, model_name or _selected_model, temperature=temperature))]
-        elif provider == "pollinations":
-            providers = [("pollinations", lambda: _generate_text_pollinations(prompt, model_name or _selected_model))]
-        else:
-            providers = [
-                ("ollama", lambda: _generate_text_ollama(prompt, model_name or _selected_model)),
-            ]
-    elif provider == "openai":
-        providers = [
-            ("openai", lambda: _generate_text_openai(prompt, model_name or _selected_model, temperature=temperature)),
-            ("gemini", lambda: _generate_text_gemini(prompt, temperature=temperature)),
-            ("ollama", lambda: _generate_text_ollama(prompt, None)),
-            ("pollinations", lambda: _generate_text_pollinations(prompt, None)),
-        ]
-    elif provider == "claude":
-        providers = [
-            ("claude", lambda: _generate_text_claude_cli(prompt, model_name or _selected_model)),
-            ("gemini", lambda: _generate_text_gemini(prompt, temperature=temperature)),
-            ("ollama", lambda: _generate_text_ollama(prompt, None)),
-            ("pollinations", lambda: _generate_text_pollinations(prompt, None)),
-        ]
-    elif provider == "gemini":
-        providers = [
-            ("gemini", lambda: _generate_text_gemini(prompt, temperature=temperature)),
-            ("ollama", lambda: _generate_text_ollama(prompt, None)),
-            ("pollinations", lambda: _generate_text_pollinations(prompt, None)),
-        ]
-    elif provider == "pollinations":
-        providers = [
-            ("pollinations", lambda: _generate_text_pollinations(prompt, model_name)),
-            ("gemini", lambda: _generate_text_gemini(prompt, temperature=temperature)),
-            ("ollama", lambda: _generate_text_ollama(prompt, None)),
-        ]
+        names = [primary]
     else:
-        providers = [
-            ("ollama", lambda: _generate_text_ollama(prompt, model_name or _selected_model)),
-            ("gemini", lambda: _generate_text_gemini(prompt, temperature=temperature)),
-            ("pollinations", lambda: _generate_text_pollinations(prompt, None)),
-        ]
+        names = [primary] + [n for n in _AUTO_FALLBACK_ORDER if n != primary]
+
+    providers = [(name, _call(name, pinned=(k == 0))) for k, name in enumerate(names)]
 
     last_error = None
     for name, fn in providers:
@@ -539,6 +547,7 @@ def generate_text(prompt: str, model_name: str = None, temperature: float = 0.7)
                 "no gemini api key" in msg
                 or "no openai api key" in msg
                 or "claude cli was not found" in msg
+                or "codex cli was not found" in msg
                 or "all gemini models" in msg
                 or "all openai models" in msg
                 or "all claude models" in msg
@@ -557,6 +566,11 @@ def _is_garbage_response(text: str) -> bool:
     if not text or len(text.strip()) < 10:
         return True
     low = text.strip().lower()
+    # Normalize typographic punctuation first. Pollinations answers with a
+    # curly apostrophe ("Here’s a quick playbook..."), which slipped past
+    # the ASCII-only markers below and let chatty prose through as content --
+    # the clips scoring pass then failed to read it as JSON.
+    low = low.replace("’", "'").replace("‘", "'").replace("ʼ", "'")
     garbage_phrases = [
         "sure thing", "sure!", "of course", "let me know",
         "please provide", "please let me know", "what topic",
@@ -626,6 +640,10 @@ def _generate_text_codex_cli(prompt: str, model: str = None) -> str:
 
     cli = get_codex_cli_command()
     selected_model = (model or get_codex_cli_model() or "").strip()
+    if selected_model.lower() in {"codex-default", "default"}:
+        # A UI placeholder, not a model id: let the CLI pick its own default
+        # instead of sending `--model codex-default`.
+        selected_model = ""
     sandbox = get_codex_cli_sandbox()
     timeout = get_codex_cli_timeout_seconds()
     effort = get_openai_reasoning_effort().lower()
@@ -1051,8 +1069,9 @@ def _generate_text_gemini(
 
     When the user picked a specific Gemini model from the UI (via
     `select_model()` + `set_user_override(True)`), `model` is passed in
-    explicitly and we call ONLY that model â€” no fallback cascade through
-    `config.json`. Otherwise, fall back to the configured cascade.
+    explicitly and we call that model first â€” no fallback cascade through
+    `config.json` unless it returns 404 (unavailable model). Otherwise, use
+    the configured cascade.
     """
     api_key = get_gemini_api_key()
     if not api_key:
@@ -1076,17 +1095,38 @@ def _generate_text_gemini(
     }
 
     available_models = [m for m in models if m not in _disabled_gemini_models]
+    if not available_models and model:
+        # A pinned model that answered 404 stays disabled for the session,
+        # and `models` is just that one id -- so the NEXT call used to raise
+        # right here, before the 404 handler below could append the
+        # configured cascade, and `generate_text` then disabled Gemini
+        # wholesale. Refill from config instead and only give up once every
+        # configured model is disabled too.
+        available_models = [
+            candidate
+            for candidate in (
+                normalize_gemini_model_id(m) for m in get_gemini_models()
+            )
+            if candidate and candidate not in _disabled_gemini_models
+        ]
+        if available_models:
+            print(
+                f"  [Gemini] '{models[0]}' is disabled this session - "
+                f"falling back to the configured cascade"
+            )
     if not available_models:
         raise RuntimeError("All Gemini models have been rate-limited this session")
 
     last_error = None
     for idx, model in enumerate(available_models):
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         try:
             if idx > 0:
                 print(f"  [Gemini] Falling back to {model}")
             started = _time.time()
-            response = requests.post(url, json=payload, timeout=120)
+            response = requests.post(
+                url, headers={"x-goog-api-key": api_key}, json=payload, timeout=120
+            )
             response.raise_for_status()
             data = response.json()
             elapsed = _time.time() - started
@@ -1113,12 +1153,20 @@ def _generate_text_gemini(
                 return text
             raise RuntimeError("Gemini returned empty text")
         except Exception as e:
-            print(f"  [Gemini] Model '{model}' failed: {e}")
+            safe_error = str(e).replace(api_key, "[REDACTED]")
+            print(f"  [Gemini] Model '{model}' failed: {safe_error}")
+            response = getattr(e, "response", None)
+            if response is not None and response.status_code == 404:
+                _disabled_gemini_models.add(model)
+                for fallback in get_gemini_models():
+                    fallback = normalize_gemini_model_id(fallback)
+                    if fallback and fallback not in available_models and fallback not in _disabled_gemini_models:
+                        available_models.append(fallback)
             # Disable rate-limited models for the session
             if "429" in str(e) or "Too Many Requests" in str(e):
                 _disabled_gemini_models.add(model)
                 print(f"  [Gemini] Disabling '{model}' (rate limited) for this session.")
-            last_error = e
+            last_error = safe_error
 
     raise RuntimeError(f"All Gemini models failed. Last error: {last_error}")
 

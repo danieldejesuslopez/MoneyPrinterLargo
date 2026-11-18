@@ -10,7 +10,9 @@ OPTIONS = [
     "Twitter Bot",
     "Affiliate Marketing",
     "Outreach",
-    "Quit"
+    "Quit",
+    "GTA 6",
+    "Animación Three.js"
 ]
 
 TWITTER_OPTIONS = [

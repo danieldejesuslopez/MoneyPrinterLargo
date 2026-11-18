@@ -78,6 +78,50 @@ EDGE_TTS_VOICES = {
 # Deep narrator voice for long-form documentary videos (Spain, neutral & authoritative)
 LONG_VIDEO_NARRATOR = "es-ES-AlvaroNeural"
 
+# Spanish narrator for Shorts when the channel speaks Spanish but the voice that
+# would be used (per-channel short_voice, or the global tts_voice when that is
+# empty) is not Spanish, e.g. the default tts_voice "Jasper" -> en-US-GuyNeural.
+SHORT_VIDEO_NARRATOR = "es-ES-AlvaroNeural"
+
+
+def resolve_voice_id(voice: str) -> str:
+    """Map a voice alias ("Pablo") to its Edge-TTS id; raw ids pass through."""
+    voice = (voice or "").strip()
+    if not voice:
+        return ""
+    return EDGE_TTS_VOICES.get(voice, voice)
+
+
+_SPANISH_LANGUAGE_NAMES = {"es", "spanish", "espanol", "español", "castellano"}
+
+
+def is_spanish_language(language: str) -> bool:
+    # Match whole names ("espanol", "Español (MX)") or locale ids ("es-BO"),
+    # not a bare "esp" prefix, which would also match "esperanto".
+    lang = (language or "").strip().lower()
+    first_word = lang.split(maxsplit=1)[0] if lang else ""
+    return first_word in _SPANISH_LANGUAGE_NAMES or lang.startswith(("es-", "es_"))
+
+
+def short_voice_for_language(tts_instance, voice_id: str, language: str) -> str:
+    """Return the voice id to synthesize a Short with.
+
+    Keeps ``voice_id`` ("" means "use the TTS default") unless the channel
+    speaks Spanish and the voice that would actually be used is not a Spanish
+    Edge-TTS voice. Spanish text on an English voice either fails with
+    NoAudioReceived or is read with an English accent, so SHORT_VIDEO_NARRATOR
+    is returned instead. KittenTTS voices are not locale-tagged Edge ids
+    ("Jasper" is also a Kitten voice name), so they are left alone.
+    """
+    if getattr(tts_instance, "_provider", "edge_tts") != "edge_tts":
+        return voice_id
+    if not is_spanish_language(language):
+        return voice_id
+    effective = voice_id or resolve_voice_id(getattr(tts_instance, "_voice", "") or "")
+    if effective.lower().startswith("es-"):
+        return voice_id
+    return SHORT_VIDEO_NARRATOR
+
 
 class TTS:
     def __init__(self) -> None:

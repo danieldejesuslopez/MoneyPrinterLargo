@@ -72,6 +72,24 @@ enciende con los valores reales de ese candidato.
 
 Documentación completa en [docs/Brain.md](docs/Brain.md).
 
+### Clips
+
+Aprende qué funciona en shorts a partir del historial de tus canales y los
+de referencia, y recorta clips verticales de un video largo para que los
+revises. No publica nada solo.
+
+```bash
+python scripts/clips.py trends                 # qué gana en formato corto
+python scripts/clips.py run <url> --rights "mi propio canal" --language es
+python scripts/clips.py list                   # borradores para revisar
+```
+
+En la webapp está en **Producción → Clips** (`/clips`): la misma consola que
+Generar (fuente, corte, salida), lo que aprendió de las tendencias, el progreso
+en vivo y un catálogo con reproductor para aprobar, rechazar o borrar cada clip.
+
+Documentación completa en [docs/Clips.md](docs/Clips.md).
+
 ### Webapp
 
 - Backend con FastAPI.
@@ -328,6 +346,18 @@ MoneyPrinterLargo-public/
 Desarrollo, integración y mantenimiento de esta versión de MoneyPrinter Largo.
 
 ---
+
+## Módulo GTA 6
+
+En **Producción → GTA 6** (`/gta6`) están la mesa editorial, fuentes y hechos
+verificados, banco de ideas, clips verticales, voz en off, revisión de
+borradores, calendario, envío explícito a Buffer y aprendizaje con métricas
+de 12/24/72 horas. Reutiliza Clips, los modelos, TTS, FFmpeg y los canales
+Firefox existentes. Incluye una exportación del kit editorial y la opción
+**6. GTA 6** en el menú del CLI.
+
+Consulta [la guía de GTA 6](docs/GTA6.md) para configurar las fuentes,
+los canales de Buffer y los flujos de producción.
 
 ## Participantes
 

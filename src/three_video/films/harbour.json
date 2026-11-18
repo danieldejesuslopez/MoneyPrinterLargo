@@ -1,0 +1,58 @@
+{
+  "title": "The Boat That Left Its Painting",
+  "module": "nightshift.js",
+  "episode": "harbour",
+  "duration": 180,
+  "aspect": "9:16",
+  "voice": "en-GB-RyanNeural",
+  "cues": [
+    [
+      0.12,
+      "Every night at ten, a little red boat disappeared from a million-dollar seascape. Every morning it came back. The museum had three theories. All three involved firing the night guard."
+    ],
+    [
+      15.12,
+      "So Nell, the guard, took two photographs. Nine fifty-nine, boat. Ten oh one, empty water. Same wall. Same frame. She put her keys on the director's desk. Now can we talk about the boat?"
+    ],
+    [
+      30.12,
+      "The director brought out a magnifying glass. The cliffs were oil paint. The sky was oil paint. But over the water, the brush marks stopped. The little red boat didn't have a single brush mark."
+    ],
+    [
+      45.12,
+      "Nell leaned sideways. The boat disappeared behind the edge of the frame. She leaned the other way. There it was again. Try doing that with a painted apple, she told the director."
+    ],
+    [
+      60.12,
+      "They lifted the picture off its hooks. Someone had cut a neat rectangle out of the canvas. Behind it sat a sheet of frosted glass. Behind the glass was a hole in the wall."
+    ],
+    [
+      75.12,
+      "The director looked genuinely relieved. A projector, he said. Someone's playing a film. Nell switched off the gallery lights. The boat got brighter. She pulled the building's projector plug. Still there."
+    ],
+    [
+      90.12,
+      "On the other side of the wall, a narrow service room ran the length of the gallery. Nell followed a streak of red light past broken chairs and a stack of Christmas decorations."
+    ],
+    [
+      105.12,
+      "At the far end was a long black tube. A lens at one end, a pair of mirrors inside. Nell put her hand in front of it. In the gallery, a giant thumb swallowed the harbour."
+    ],
+    [
+      120.12,
+      "Through a dusty window, across two streets, was the real harbour. And tied to its last wooden jetty was a red ferry. At ten sharp, its captain switched off the cabin light."
+    ],
+    [
+      135.12,
+      "The painter had left one part of the picture unfinished on purpose. While other artists mixed colours to get the water right, she'd borrowed the actual tide. For ninety years, nobody had looked behind it."
+    ],
+    [
+      150.12,
+      "The director wanted to insure the ferry. The captain wanted ninety years of modelling fees. Nell had a smaller request. Could they please move the bin that had just appeared in the foreground?"
+    ],
+    [
+      165.12,
+      "The museum kept the picture exactly where it was. They changed one thing. Beneath the painter's name, the little brass plaque now reads: oil on canvas, glass, and whatever the harbour is doing today."
+    ]
+  ]
+}

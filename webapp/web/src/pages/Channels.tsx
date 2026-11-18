@@ -351,6 +351,13 @@ function ChannelCard({
             <div className="text-[12px] text-muted-foreground truncate">
               {channel.niche || "(sin niche definido)"}
             </div>
+            {channel.gta6_managed && (
+              <div className="text-[11px] mt-1 text-muted-foreground">
+                {channel.youtube_handle} · {channel.automation_profile_verified
+                  ? "Perfil de subida confirmado"
+                  : "Falta asociar perfil de subida"}
+              </div>
+            )}
           </div>
         </div>
 

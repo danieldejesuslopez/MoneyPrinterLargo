@@ -158,5 +158,21 @@
             "overall_min_score": 7.0
         },
         "channels": {}
+    },
+    "clips": {
+        "language": "",
+        "captions": "auto",
+        "min_seconds": 18,
+        "max_seconds": 60,
+        "count": 3,
+        "max_overlap": 0.25,
+        "reframe": "blur",
+        "auto_facecam": true,
+        "font": "Poppins-Black.ttf",
+        "subtitle_font_size": 80,
+        "title_overlay": "auto",
+        "title_font_size": 88,
+        "facecam": "",
+        "max_source_minutes": 180
     }
 }

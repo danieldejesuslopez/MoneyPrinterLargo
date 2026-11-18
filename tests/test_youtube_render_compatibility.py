@@ -1,9 +1,10 @@
+import re
 import sys
 from pathlib import Path
 from io import BytesIO
 
 import pytest
-from PIL import Image
+from PIL import Image, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -111,8 +112,108 @@ def test_karaoke_ass_writer_uses_configurable_subtitle_style(tmp_path, monkeypat
     assert youtube._write_karaoke_ass_subtitles(str(ass_path), 1.2) is True
 
     text = ass_path.read_text(encoding="utf-8")
-    assert "Style: Karaoke,Poppins Black,72," in text
+    assert "Style: Karaoke,Poppins Black,127," in text
     assert r"{\an8\pos(540,1200)}" in text
+
+
+@pytest.fixture
+def short_subtitle_settings(monkeypatch):
+    import classes.YouTube as youtube_module
+
+    monkeypatch.setattr(youtube_module, "get_fonts_dir", lambda: str(ROOT / "fonts"))
+    monkeypatch.setattr(youtube_module, "get_subtitle_font_size", lambda default: 72)
+    monkeypatch.setattr(youtube_module, "get_subtitle_position_y", lambda default: 1200)
+    monkeypatch.setattr(youtube_module, "get_subtitle_max_words_per_group", lambda default: 10)
+    monkeypatch.setattr(youtube_module, "get_subtitle_pause_gap_seconds", lambda: 1.0)
+
+
+def test_karaoke_ass_writer_shrinks_long_word_before_word_highlights(
+    tmp_path, short_subtitle_settings
+):
+    long_word = "W" * 80
+    youtube = YouTube.__new__(YouTube)
+    youtube.word_timestamps = [
+        {"start": 0.0, "end": 0.3, "word": long_word},
+        {"start": 0.3, "end": 0.6, "word": "hola"},
+    ]
+    youtube.script = f"{long_word} hola"
+    youtube.subject = "test"
+    youtube._retention_mode = "standard"
+
+    ass_path = tmp_path / "long_word.ass"
+    assert youtube._write_karaoke_ass_subtitles(str(ass_path), 1.0) is True
+
+    lines = ass_path.read_text(encoding="utf-8").splitlines()
+    style = next(line for line in lines if line.startswith("Style: Karaoke,"))
+    style_font_size = int(style.split(",")[2])
+    dialogues = [line for line in lines if line.startswith("Dialogue:")]
+    assert len(dialogues) == 2
+    for dialogue in dialogues:
+        ass_text = dialogue.split(",", 9)[9]
+        prefix, word_tags = ass_text.split("}", 1)
+        fit = re.search(r"\\fs(\d+)", prefix)
+        assert fit is not None
+        assert 0 < int(fit.group(1)) < style_font_size
+        assert len(re.findall(r"\\fs\d+", ass_text)) == 1
+        assert r"\c&H0000D7FF&\fscx112\fscy112" in word_tags
+        assert r"\c&H00FFFFFF&\fscx100\fscy100" in word_tags
+        assert r"\r" not in word_tags
+        assert dialogue.count(r"\N") <= 1
+
+
+def test_karaoke_ass_writer_does_not_shrink_short_words(tmp_path, short_subtitle_settings):
+    youtube = YouTube.__new__(YouTube)
+    youtube.word_timestamps = [
+        {"start": 0.0, "end": 0.3, "word": "hola"},
+        {"start": 0.3, "end": 0.6, "word": "mundo"},
+    ]
+    youtube.script = "hola mundo"
+    youtube.subject = "test"
+    youtube._retention_mode = "standard"
+
+    ass_path = tmp_path / "short_words.ass"
+    assert youtube._write_karaoke_ass_subtitles(str(ass_path), 1.0) is True
+
+    dialogues = [
+        line for line in ass_path.read_text(encoding="utf-8").splitlines()
+        if line.startswith("Dialogue:")
+    ]
+    assert len(dialogues) == 2
+    assert all(re.search(r"\\fs\d+", line) is None for line in dialogues)
+    assert all(line.count(r"\N") <= 1 for line in dialogues)
+
+
+@pytest.mark.parametrize("retention_mode", ["standard", "maxima_retencion"])
+def test_karaoke_ass_writer_limits_every_dialogue_to_two_lines(
+    tmp_path, short_subtitle_settings, retention_mode
+):
+    # Each word fits by itself, while two exceed the available line width.
+    font = ImageFont.truetype(str(ROOT / "fonts" / "Poppins-Black.ttf"), 72)
+    words = ["W" * 10 + str(index) for index in range(6)]
+    for word in words:
+        bbox = font.getbbox(word)
+        assert 460 < bbox[2] - bbox[0] < 920
+
+    youtube = YouTube.__new__(YouTube)
+    youtube.word_timestamps = [
+        {"start": index * 0.3, "end": (index + 1) * 0.3, "word": word}
+        for index, word in enumerate(words)
+    ]
+    youtube.script = " ".join(words)
+    youtube.subject = "test"
+    youtube._retention_mode = retention_mode
+
+    ass_path = tmp_path / "two_lines.ass"
+    assert youtube._write_karaoke_ass_subtitles(str(ass_path), 2.0) is True
+
+    dialogues = [
+        line for line in ass_path.read_text(encoding="utf-8").splitlines()
+        if line.startswith("Dialogue:")
+    ]
+    assert len(dialogues) == len(words)
+    assert all(line.count(r"\N") <= 1 for line in dialogues)
+    assert any(line.count(r"\N") == 1 for line in dialogues)
+    assert all(any(word in line for line in dialogues) for word in words)
 
 
 def test_ensure_karaoke_timestamps_tries_whisper_before_estimate(monkeypatch):
@@ -209,6 +310,27 @@ def test_short_ken_burns_uses_zoompan_not_animated_crop():
     # Alternating direction: clip 0 zooms in (1+0.08*...), clip 1 zooms out.
     assert "z='1+0.08*(on/" in short_filter
     assert "z='1+0.08-0.08*(on/" in short_filter
+
+
+def test_short_audio_filter_normalizes_mix_then_resamples_before_trimming():
+    youtube = YouTube.__new__(YouTube)
+    short_filter = youtube._short_ffmpeg_filter_complex(
+        image_count=1,
+        durations=[2.0],
+        fps=30,
+        output_size=(1080, 1920),
+        crossfade=0,
+        ken_burns_enabled=False,
+        karaoke_ass_path="",
+        music_volume=0.1,
+        audio_duration=2.0,
+    )
+
+    mix_filter = next(part for part in short_filter.split(";") if part.startswith("[voice][music]"))
+    assert "amix=inputs=2:duration=first:dropout_transition=0:normalize=0" in mix_filter
+    assert "loudnorm=I=-14:TP=-1.5:LRA=11" in mix_filter
+    assert "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,atrim=0:2.000000" in mix_filter
+    assert mix_filter.endswith("asetpts=PTS-STARTPTS[aout]")
 
 
 def test_landscape_karaoke_ass_writer_uses_16_9_canvas(tmp_path):

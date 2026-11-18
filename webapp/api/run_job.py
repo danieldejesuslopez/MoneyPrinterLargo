@@ -183,6 +183,9 @@ def _select_llm_provider(override_provider: str = "", override_model: str = "", 
     if provider == "claude":
         print("[runner] Using Claude provider", flush=True)
         return
+    if provider == "codex":
+        print("[runner] Using Codex provider", flush=True)
+        return
     if provider == "pollinations":
         print("[runner] Using Pollinations provider", flush=True)
         return
@@ -910,6 +913,25 @@ def cmd_tweet(args):
     print("[runner] Tweet posted", flush=True)
 
 
+def cmd_clips(args) -> None:
+    """Run scripts/clips.py with the given arguments, in this process.
+
+    The clips module picks its own model fallbacks (the same as running the
+    CLI by hand), so the LLM provider selection the generation commands do
+    is skipped on purpose.
+    """
+    import importlib.util
+
+    script = ROOT_DIR / "scripts" / "clips.py"
+    spec = importlib.util.spec_from_file_location("clips_cli", script)
+    if spec is None or spec.loader is None:
+        print(f"[!] cannot load {script}", flush=True)
+        sys.exit(2)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    sys.exit(module.main(list(args.rest)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -997,9 +1019,24 @@ def main():
     p_sy.add_argument("--refresh-dates", action="store_true")
     p_sy.add_argument("--channel-id", default="")
 
+    # Everything after `clips` is handed verbatim to scripts/clips.py, so the
+    # webapp drives exactly the same command line a person would type.
+    p_cl = sub.add_parser("clips")
+    p_cl.add_argument("rest", nargs=argparse.REMAINDER)
+
+    p_gta = sub.add_parser("gta6")
+    p_gta.add_argument("rest", nargs=argparse.REMAINDER)
+
     args = parser.parse_args()
 
     _setup_paths()
+    if args.cmd == "gta6":
+        import runpy
+        module = runpy.run_path(str(ROOT_DIR / "scripts" / "gta6.py"), run_name="gta6_cli")
+        sys.exit(module["main"](list(args.rest)))
+    if args.cmd == "clips":
+        cmd_clips(args)
+        return
     if args.cmd not in ("thumbnail", "preview-voice"):
         _apply_openai_reasoning_effort(getattr(args, "llm_reasoning_effort", "") or "")
         if args.cmd == "generate":

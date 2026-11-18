@@ -1,0 +1,68 @@
+{
+  "title": "The City That Moved Its Dike",
+  "episode": "waal",
+  "voice": "en-GB-RyanNeural",
+  "module": "waterworks.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "sources": [
+    [
+      "Rijkswaterstaat",
+      "https://www.rijkswaterstaat.nl/en/projects/iconic-structures/room-for-the-river"
+    ],
+    [
+      "Climate-ADAPT",
+      "https://climate-adapt.eea.europa.eu/en/metadata/case-studies/room-for-the-river-waal-2013-protecting-the-city-of-nijmegen"
+    ]
+  ],
+  "cues": [
+    [
+      0.15,
+      "Look at the island in the middle of this Dutch city. Until quite recently, you could walk across that second stretch of water on dry land. Why would anyone dig a river beside a river?"
+    ],
+    [
+      15.15,
+      "Follow the Waal around this bend. On one bank is the old city of Nijmegen. Across the water is Lent, protected by a long earth embankment called a dike. Between them, the river narrows."
+    ],
+    [
+      30.15,
+      "In the winter of nineteen ninety-five, rain and melting snow sent Dutch rivers dangerously high. Across the Gelderland river region, a quarter of a million people were evacuated as a precaution."
+    ],
+    [
+      45.15,
+      "Here at Nijmegen, the bend mattered because a flood arriving from upstream still had to squeeze through this narrow reach. See the width between the banks? That's the part the engineers decided to change."
+    ],
+    [
+      60.15,
+      "Look at the line on the Lent side. That's where the dike used to run. Starting in twenty twelve, crews set the flood defence back three hundred and fifty metres, making room on the river side."
+    ],
+    [
+      75.15,
+      "That strip of land had owners. Making room for water meant acquiring land and arranging compensation. At public meetings and workshops, residents could see the proposals and tell planners what the changes meant for them."
+    ],
+    [
+      90.15,
+      "Inside the new line, crews dug a channel roughly three kilometres long. Trace it with your eye. It leaves the main river, curves through the floodplain, and meets the Waal again downstream."
+    ],
+    [
+      105.15,
+      "Now watch the moving marks. During high flows, roughly one third of the water can travel through the side channel. The rest keeps moving along the old course past the city."
+    ],
+    [
+      120.15,
+      "Both streams end up in the same river. The difference is what happens here, at the bend. With two passages carrying the flood through town, the water can pass at a lower level."
+    ],
+    [
+      135.15,
+      "The design target was a drop of twenty-seven centimetres during high water. By completion in twenty sixteen, the project achieved thirty-five. Think of those centimetres as extra clearance below the top of the dike."
+    ],
+    [
+      150.15,
+      "The earth left between the channels became the island you saw at the start. Bridges connect it to the banks. What used to be part of the floodplain is now a river park where people can walk beside both channels."
+    ],
+    [
+      165.15,
+      "From a bridge, that second ribbon of water looks like scenery. When the Waal runs high, it has a job. Part of the river takes this route, and the city gains those thirty-five centimetres."
+    ]
+  ]
+}

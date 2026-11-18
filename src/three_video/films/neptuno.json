@@ -1,0 +1,57 @@
+{
+  "title": "El planeta que faltaba",
+  "module": "neptuno.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "voice": "es-MX-JorgeNeural",
+  "cues": [
+    [
+      0.45,
+      "¿Cómo encuentras un planeta si ni siquiera sabes dónde apuntar el telescopio? En mil ochocientos cuarenta y seis, la pista estaba en otro planeta. Urano llegaba tarde a sus citas."
+    ],
+    [
+      14.8,
+      "Imagina que esta noche dibujas un punto donde esperas encontrarlo. Miras por el telescopio. Está un poco más allá. Repites la prueba años después, y ahora ha quedado atrás. ¿Qué está pasando?"
+    ],
+    [
+      30.4,
+      "Los astrónomos conocían la gravedad del Sol. También podían calcular cuánto tiraban Júpiter y Saturno de Urano. Al juntar todas esas fuerzas, obtenían el camino que debía seguir. Pero las cuentas seguían sin cuadrar."
+    ],
+    [
+      46,
+      "En París, un matemático llamado Urbain Le Verrier decidió darle la vuelta al problema. Supongamos que, más lejos, hay otro planeta. ¿Dónde tendría que estar para producir exactamente ese desvío?"
+    ],
+    [
+      61.3,
+      "Mira las dos órbitas. Cuando el planeta de fuera está por delante de Urano, su gravedad tira un poco de él hacia adelante. Cuando queda detrás, lo frena. Es un tirón diminuto, pero durante años deja rastro."
+    ],
+    [
+      78.3,
+      "En Inglaterra, John Couch Adams estaba haciendo sus propios cálculos. Los dos trabajaban con una ventaja extraordinaria. Aunque nadie hubiera reconocido al planeta, Urano llevaba décadas sintiendo su peso."
+    ],
+    [
+      92.4,
+      "Le Verrier envió una carta a Berlín. Iba dirigida a Johann Galle, que sí tenía un telescopio a mano. La carta llegó el veintitrés de septiembre. Esa misma noche, Galle salió a buscar."
+    ],
+    [
+      108,
+      "Ahora viene la parte difícil. Por el ocular se ven puntitos de luz. ¿Cómo distingues un planeta nuevo entre tantas estrellas? Heinrich d’Arrest, que acompañaba a Galle, propuso comparar lo que veían con una carta del cielo."
+    ],
+    [
+      125.5,
+      "Piensa en dos copias de la misma fotografía. Si las superpones, casi todo coincide. Pero en el telescopio había un punto que no figuraba en el mapa. Justo en la zona que señalaba la carta de París."
+    ],
+    [
+      143,
+      "¿Y si solo faltaba una estrella en el catálogo? Volvieron a observar. A diferencia de las estrellas del fondo, aquel punto había cambiado de sitio. Ahí estaba la prueba que les faltaba."
+    ],
+    [
+      157,
+      "Lo llamaron Neptuno. Estaba a menos de un grado de la posición que había calculado Le Verrier. Para hacerte una idea, en ese pedacito de cielo apenas caben dos lunas llenas, una junto a la otra."
+    ],
+    [
+      173,
+      "La primera pista de Neptuno fue ese pequeño retraso de Urano. Una ausencia que se podía medir."
+    ]
+  ]
+}

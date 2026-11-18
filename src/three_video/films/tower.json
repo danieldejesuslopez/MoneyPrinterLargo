@@ -1,0 +1,79 @@
+{
+  "title": "What Lifts Tower Bridge?",
+  "episode": "tower",
+  "module": "kinetics.js",
+  "aspect": "9:16",
+  "duration": 180,
+  "voice": "en-GB-RyanNeural",
+  "location": "TOWER BRIDGE  /  LONDON",
+  "credit": "Tower Bridge, City of London",
+  "sources": [
+    "https://www.towerbridge.org.uk/stories/how-does-tower-bridge-work",
+    "https://www.towerbridge.org.uk/stories/what-type-of-bridge-is-tower-bridge",
+    "https://www.towerbridge.org.uk/stories/how-did-the-engine-rooms-work"
+  ],
+  "chapters": [
+    "Under the road",
+    "Two ways to cross",
+    "A steel seesaw",
+    "The hidden weight",
+    "Room to disappear",
+    "Where the teeth meet",
+    "When steam did the work",
+    "Pressure held in reserve",
+    "From pressure to motion",
+    "A different power source",
+    "The ship passes",
+    "Watch the short arm"
+  ],
+  "cues": [
+    [
+      0.15,
+      "Look at the road as Tower Bridge opens. Its tip climbs towards the sky. Back inside the tower, another piece drops almost out of sight. Follow that hidden piece and the whole lift starts to make sense."
+    ],
+    [
+      15.15,
+      "In London, traffic needs a road across the Thames. Tall ships need the same space above the river. Tower Bridge gives each a turn. Its middle span splits into two moving leaves with a pivot near each tower."
+    ],
+    [
+      30.15,
+      "Pick one leaf and follow the orange pivot. The long arm carries the road above the river. A shorter arm runs backwards into the tower. As one end goes up, the other swings down."
+    ],
+    [
+      45.15,
+      "On that short arm sits a counterweight of about four hundred and twenty-two tonnes. It offsets most of the turning effect of the long road deck. A heavy weight close to a pivot can balance a lighter load farther out."
+    ],
+    [
+      60.15,
+      "The weight needs somewhere to go. Beneath each tower is a bascule chamber, a large space kept clear for its swing. Watch the cutaway. Every metre of road movement outside has a matching rotation beneath the tower."
+    ],
+    [
+      75.15,
+      "Balance makes the job easier, but something still has to turn the bridge. A drive cog meshes with a curved rack attached to the moving leaf. As the cog turns, the rack carries the leaf around its pivot."
+    ],
+    [
+      90.15,
+      "Originally, workers kept coal fires burning beneath boilers. Steam drove pumping engines. Inside the engine room, a piston moved a flywheel and the pumps forced water into a set of storage cylinders."
+    ],
+    [
+      105.15,
+      "These cylinders were called accumulators. Pumping water in raised a weighted piston. Its weight kept the water under pressure, so when a ship arrived, energy for the lift was already waiting."
+    ],
+    [
+      120.15,
+      "Follow the blue water when the valve opens. Stored pressure feeds a drive engine. Its pistons turn the machinery connected to the cog, and the cog turns the rack. Out on the river the road begins to rise."
+    ],
+    [
+      135.15,
+      "In nineteen seventy-six the bridge completed its switch to an electro-hydraulic system. Electric pumps supply pressurised oil. The energy source and the fluid changed, while the familiar two leaves kept opening above the Thames."
+    ],
+    [
+      150.15,
+      "With the road clear of the navigation opening, the ship can pass between the towers. When the leaves come down, the short arms move the other way and lift the hidden counterweights back towards their starting positions."
+    ],
+    [
+      165.15,
+      "The next time you see Tower Bridge open, imagine the view beneath the traffic. The visible road, the buried counterweight and the curved rack all turn together. The river gets a passage because that whole assembly can pivot."
+    ]
+  ]
+}

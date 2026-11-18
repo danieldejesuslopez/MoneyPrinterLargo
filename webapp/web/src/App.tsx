@@ -17,6 +17,8 @@ import { NotFound } from "./pages/NotFound";
 import { HiggsfieldStudio } from "./pages/HiggsfieldStudio";
 import { HiggsfieldNew } from "./pages/HiggsfieldNew";
 import { HiggsfieldProject } from "./pages/HiggsfieldProject";
+import { Clips } from "./pages/Clips";
+import { Gta6 } from "./pages/Gta6";
 
 export default function App() {
   return (
@@ -38,6 +40,9 @@ export default function App() {
         <Route path="higgsfield" element={<HiggsfieldStudio />} />
         <Route path="higgsfield/new" element={<HiggsfieldNew />} />
         <Route path="higgsfield/:id" element={<HiggsfieldProject />} />
+        <Route path="clips" element={<Clips />} />
+        <Route path="gta6" element={<Gta6 />} />
+        <Route path="clips/continuados" element={<Clips initialMode="full" />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

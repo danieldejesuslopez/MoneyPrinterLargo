@@ -61,6 +61,9 @@ export interface Channel {
   hook_profile: string;
   voice_drama: boolean;
   youtube_handle: string;
+  automation_profile_verified?: boolean | null;
+  gta6_managed?: boolean;
+  upload_disabled_reason?: string;
   videos_count: number;
   // Populated by scripts/sync_youtube_cache.py. `null` means the channel has
   // never been synced — render as "—" so it doesn't look like a real "0 subs".

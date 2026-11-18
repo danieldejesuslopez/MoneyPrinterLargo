@@ -21,6 +21,9 @@ auto.sh
 # Generated thumbnails
 thumbnails/
 
+# Generated videos, downloads, and render outputs
+/output/
+
 # Studio build artifacts
 studio/node_modules/
 studio/.next/

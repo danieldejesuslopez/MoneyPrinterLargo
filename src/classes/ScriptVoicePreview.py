@@ -19,7 +19,7 @@ from utils import (
 )
 
 from .MaxRetention import MaxRetentionEngine, is_max_retention, normalize_retention_mode
-from .Tts import EDGE_TTS_VOICES, LONG_VIDEO_NARRATOR, TTS
+from .Tts import EDGE_TTS_VOICES, LONG_VIDEO_NARRATOR, TTS, short_voice_for_language
 
 
 @dataclass(frozen=True)
@@ -147,6 +147,8 @@ class ScriptVoicePreview:
         tts_text = expand_spanish_numbers(tts_text)
 
         voice_id = _resolve_voice(self.config.short_voice)
+        # Same locale guard as the Short render, so the preview sounds the same.
+        voice_id = short_voice_for_language(self.tts_instance, voice_id, self.config.language)
         if is_max_retention(self.config.retention_mode):
             rate = MaxRetentionEngine.VOICE_RATE
             pitch = MaxRetentionEngine.VOICE_DRAMA_PITCH if self.config.voice_drama else ""
