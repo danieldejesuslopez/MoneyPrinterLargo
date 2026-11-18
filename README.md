@@ -364,13 +364,8 @@ los canales de Buffer y los flujos de producción.
 Perfiles que participaron o aparecen vinculados al historial/base del proyecto:
 
 - [@Naustudents53](https://github.com/Naustudents53) - Daniel Lopez, autor y mantenedor de esta versión.
-- [@andrepichardo](https://github.com/andrepichardo) - aportes/base previa del proyecto.
 - [@FujiwaraChoki](https://github.com/FujiwaraChoki) - base original MoneyPrinterV2.
-- [@AdityaKhowalGithub](https://github.com/AdityaKhowalGithub)
-- [@cool-aid](https://github.com/cool-aid)
-- [@FedeGioz](https://github.com/FedeGioz)
-- [@TomyDiNero](https://github.com/TomyDiNero)
-- [@Xeno852](https://github.com/Xeno852)
+
 
 ---
 
